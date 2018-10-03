@@ -10,6 +10,10 @@
     display: none;
 }
 
+.mySlides > img {
+  border-radius: 0.75rem;
+}
+
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
