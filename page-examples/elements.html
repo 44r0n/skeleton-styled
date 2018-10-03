@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 <body>
-    <div class= "navbar top">
+    <div id="topnav" class= "navbar top">
         <a href="#home" class="active">Home</a>
         <a href="#news">News</a>
         <a href="#contact">Contact</a> 
         <a href="#about">About</a>
         <a href="https://github.com/44r0n/skeleton-styled/tree/master"><i class="fab fa-github"></i> Fork on Github</a>
-        <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a> -->
+        <a href="https://www.npmjs.com/package/skeleton-styled"><i class="fab fa-npm"></i> npm package</a>
+        <a href="#options" class="mobile"><i class="fas fa-user"></i> User options</a>
+        <a href="javascript:void(0);" class="icon" onclick="showTopNavBar('topnav')">
+            <i class="fas fa-bars"></i>
+        </a>
         <input type="text" name="search" placeholder="Search.."> 
         <button class="button-success" type="submit"><i class="fa fa-search"></i></button>  
         <div class="dropdown" style="float:right;">
@@ -28,7 +30,7 @@
                 <a href="#"><i class="fas fa-cog"></i> Settings</a>
                 <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </div>
-        </div> 
+        </div>
     </div>
     <div class="navbar side">
         <a href="../index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
