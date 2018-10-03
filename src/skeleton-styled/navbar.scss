@@ -50,6 +50,10 @@
     display: none;
 }
 
+.navbar .mobile {
+    display: none;
+}
+
  /* Add a black background color to the top navigation */
 .top {    
     top: 0; /* Position the navbar at the top of the page */
@@ -81,7 +85,7 @@ div.content {
 @media screen and (max-width: 600px) {
   .top a:not(:first-child), .dropdown .dropbtn {
     display: none;
-  }
+  }  
   .top a.icon {
     float: right;
     display: block;
@@ -107,15 +111,9 @@ div.content {
   .top.responsive a {
     float: none;
     display: block;
-    text-align: left;
+    text-align: center;
   }
-  .top.responsive .dropdown {float: none;}
-  .top.responsive .dropdown-content {position: relative;}
-  .top.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
+  .top.responsive .dropdown {display: none;}
 }
 
 .navbar input[type=text] {

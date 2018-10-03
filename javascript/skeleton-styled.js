@@ -63,6 +63,20 @@ function openImageModal(elem, modalName) {
 //     modalImg.src = this.src;
 //     captionText.innerHTML = this.alt;
 // }
+var  defaultSidebarWidth = document.getElementsByClassName("navbar side")[0].currentStyle || window.getComputedStyle(document.getElementsByClassName("navbar side")[0]);
+
+
+function showTopNavBar(id) {
+    var x = document.getElementById(id);
+    
+    if (x.className === "navbar top") {
+        x.className = "navbar top responsive";
+        document.getElementsByClassName("navbar side")[0].style.marginTop = "0px";
+    } else {
+        x.className = "navbar top";
+        document.getElementsByClassName("navbar side")[0].removeAttribute("style");
+    }
+} 
 function plusSlides(n, no) {
   showSlides(slideIndex[no] += n, no);
 }
@@ -90,13 +104,4 @@ function showSlides(n, no) {
     setInterval(function() { plusSlides(1,0); },timeInterval);
     intervalSet = true;
   }
-} 
-
-function autoShowSlides(n, no) {    
-    var i = n;
-    for(;;){
-      setTimeout(showSlides(i,no), 500); // Change image every 2 seconds
-      i++;
-    }
-    
 } 
