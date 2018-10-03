@@ -1102,7 +1102,7 @@ select {
   -moz-appearance: none;
   background-image: linear-gradient(45deg, transparent 50%, #999 50%), linear-gradient(135deg, #999 50%, transparent 50%);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat; }
 
 select:focus {
@@ -1113,7 +1113,7 @@ select:focus {
   border-color: #33C3F0;
   background-image: linear-gradient(45deg, #33C3F0 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #33C3F0 50%);
   background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat;
   outline: 0; }
 
@@ -1828,10 +1828,6 @@ td {
 
 table.bordered th, table.bordered td {
   border: 1px solid #D1D1D1; }
-
-th:first-child,
-td:first-child {
-  padding-left: 0; }
 
 th:last-child,
 td:last-child {
