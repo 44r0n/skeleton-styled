@@ -19,7 +19,31 @@ select {
     transition: border-color $transition-time;
     border-radius: 0px; //For macos rendering.
     caret-color: $clear-black;
-}   
+}  
+
+/* Big */
+input[type="email"].big,
+input[type="number"].big,
+input[type="search"].big,
+input[type="text"].big,
+input[type="tel"].big,
+input[type="url"].big,
+input[type="password"].big,
+textarea.big,
+select.big{
+    font-size: 130%;
+    width: 40%;
+    text-indent: 42px;
+    border-width: 0 0 2px;
+}
+
+span.fas {
+    position: relative;
+    left: 42px;
+    color: $clear-grey;
+    transition: color $transition-time;
+}
+
 /* Invalid */
 input[type="email"]:invalid,
 input[type="number"]:invalid,
@@ -33,9 +57,10 @@ select:invalid {
     background-color: transparent;
     border-color: $red !important;    
     box-shadow: none;    
-    caret-color: $red;
-    color: $red;
+    caret-color: $red !important;
+    color: $red !important;
 }   
+  
 /*Disabled */
 input[type="email"]:disabled,
 input[type="number"]:disabled,

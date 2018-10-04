@@ -1,0 +1,43 @@
+body.dark {
+    background-color: $dark-grey;
+}
+
+body.dark ::placeholder {
+    color:$clear-grey;
+}
+
+body.dark input[type="email"],
+body.dark input[type="number"],
+body.dark input[type="search"],
+body.dark input[type="text"],
+body.dark input[type="tel"],
+body.dark input[type="url"],
+body.dark input[type="password"],
+body.dark textarea,
+body.dark select {
+    height: $form-element-height;
+    padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+    background-color: transparent;
+    border-color: $clear-grey ;   
+    border-bottom-style: solid; //For safari rendering
+    box-sizing: border-box; 
+    border-width: 0 0 2px;
+    transition: border-color $transition-time;
+    border-radius: 0px; //For macos rendering.
+    caret-color: $white;
+    color: $white;
+}  
+
+body.dark input[type="email"]:focus,
+body.dark input[type="number"]:focus,
+body.dark input[type="search"]:focus,
+body.dark input[type="text"]:focus,
+body.dark input[type="tel"]:focus,
+body.dark input[type="url"]:focus,
+body.dark input[type="password"]:focus,
+body.dark textarea:focus,
+body.dark select:focus {
+    border-color: $blue;
+    outline: 0;
+    outline-width: 0px; // safari
+}

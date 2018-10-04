@@ -477,6 +477,49 @@ line-height: 1.6;
 font-weight: 400;
 font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 color: #222; }
+body.dark {
+    background-color: $dark-grey;
+}
+
+body.dark ::placeholder {
+    color:$clear-grey;
+}
+
+body.dark input[type="email"],
+body.dark input[type="number"],
+body.dark input[type="search"],
+body.dark input[type="text"],
+body.dark input[type="tel"],
+body.dark input[type="url"],
+body.dark input[type="password"],
+body.dark textarea,
+body.dark select {
+    height: $form-element-height;
+    padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+    background-color: transparent;
+    border-color: $clear-grey ;   
+    border-bottom-style: solid; //For safari rendering
+    box-sizing: border-box; 
+    border-width: 0 0 2px;
+    transition: border-color $transition-time;
+    border-radius: 0px; //For macos rendering.
+    caret-color: $white;
+    color: $white;
+}  
+
+body.dark input[type="email"]:focus,
+body.dark input[type="number"]:focus,
+body.dark input[type="search"]:focus,
+body.dark input[type="text"]:focus,
+body.dark input[type="tel"]:focus,
+body.dark input[type="url"]:focus,
+body.dark input[type="password"]:focus,
+body.dark textarea:focus,
+body.dark select:focus {
+    border-color: $blue;
+    outline: 0;
+    outline-width: 0px; // safari
+}
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button,
@@ -1095,7 +1138,31 @@ select {
     transition: border-color $transition-time;
     border-radius: 0px; //For macos rendering.
     caret-color: $clear-black;
-}   
+}  
+
+/* Big */
+input[type="email"].big,
+input[type="number"].big,
+input[type="search"].big,
+input[type="text"].big,
+input[type="tel"].big,
+input[type="url"].big,
+input[type="password"].big,
+textarea.big,
+select.big{
+    font-size: 130%;
+    width: 40%;
+    text-indent: 42px;
+    border-width: 0 0 2px;
+}
+
+span.fas {
+    position: relative;
+    left: 42px;
+    color: $clear-grey;
+    transition: color $transition-time;
+}
+
 /* Invalid */
 input[type="email"]:invalid,
 input[type="number"]:invalid,
@@ -1109,9 +1176,10 @@ select:invalid {
     background-color: transparent;
     border-color: $red !important;    
     box-shadow: none;    
-    caret-color: $red;
-    color: $red;
+    caret-color: $red !important;
+    color: $red !important;
 }   
+  
 /*Disabled */
 input[type="email"]:disabled,
 input[type="number"]:disabled,
