@@ -385,6 +385,58 @@ body {
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; }
 
+body.dark {
+  background-color: #444; }
+
+body.dark ::-webkit-input-placeholder {
+  color: #999; }
+
+body.dark :-ms-input-placeholder {
+  color: #999; }
+
+body.dark ::-ms-input-placeholder {
+  color: #999; }
+
+body.dark ::placeholder {
+  color: #999; }
+
+body.dark input[type="email"],
+body.dark input[type="number"],
+body.dark input[type="search"],
+body.dark input[type="text"],
+body.dark input[type="tel"],
+body.dark input[type="url"],
+body.dark input[type="password"],
+body.dark textarea,
+body.dark select {
+  height: 38px;
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: transparent;
+  border-color: #999;
+  border-bottom-style: solid;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-width: 0 0 2px;
+  -webkit-transition: border-color 0.7s;
+  transition: border-color 0.7s;
+  border-radius: 0px;
+  caret-color: #fff;
+  color: #fff; }
+
+body.dark input[type="email"]:focus,
+body.dark input[type="number"]:focus,
+body.dark input[type="search"]:focus,
+body.dark input[type="text"]:focus,
+body.dark input[type="tel"]:focus,
+body.dark input[type="url"]:focus,
+body.dark input[type="password"]:focus,
+body.dark textarea:focus,
+body.dark select:focus {
+  border-color: #33C3F0;
+  outline: 0;
+  outline-width: 0px; }
+
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button,
@@ -1005,6 +1057,58 @@ select {
   border-radius: 0px;
   caret-color: #222; }
 
+/* Big */
+input[type="email"].big,
+input[type="number"].big,
+input[type="search"].big,
+input[type="text"].big,
+input[type="tel"].big,
+input[type="url"].big,
+input[type="password"].big,
+textarea.big,
+select.big {
+  font-size: 130%;
+  width: 40%;
+  text-indent: 42px;
+  border-width: 0 0 2px; }
+
+a.big {
+  width: 20%;
+  position: relative;
+  left: 10px; }
+
+span.fas {
+  position: relative;
+  left: 42px;
+  color: #999;
+  -webkit-transition: color 0.7s;
+  transition: color 0.7s; }
+
+@media screen and (max-width: 600px) {
+  input[type="email"].big,
+  input[type="number"].big,
+  input[type="search"].big,
+  input[type="text"].big,
+  input[type="tel"].big,
+  input[type="url"].big,
+  input[type="password"].big,
+  textarea.big,
+  select.big {
+    font-size: 130%;
+    width: 80%;
+    text-indent: 42px;
+    border-width: 0 0 1px; }
+  a.big {
+    width: 80%;
+    position: relative;
+    left: 10px; }
+  span.fas {
+    position: relative;
+    left: 42px;
+    color: #999;
+    -webkit-transition: color 0.7s;
+    transition: color 0.7s; } }
+
 /* Invalid */
 input[type="email"]:invalid,
 input[type="number"]:invalid,
@@ -1019,8 +1123,8 @@ select:invalid {
   border-color: #c94c4c !important;
   -webkit-box-shadow: none;
   box-shadow: none;
-  caret-color: #c94c4c;
-  color: #c94c4c; }
+  caret-color: #c94c4c !important;
+  color: #c94c4c !important; }
 
 /*Disabled */
 input[type="email"]:disabled,
