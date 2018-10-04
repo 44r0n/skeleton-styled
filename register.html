@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get skeleton-styled</title>
+
+    <link rel="stylesheet" href="css/skeleton-styled.min.css">    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+<body class="dark">
+    <div class="center-md" style="margin-top: 5%;">        
+        <i class="fas fa-skull fa-10x"></i>
+        <h2>Skeleton styled</h2>
+        <form>
+            <div class="col-md-12">    
+                <span id="iconMail" class="fas fa-envelope fa-2x"></span>          
+                <input type="email" class="big" id="userEmail" onkeyup="checkStatus(this,'iconMail');" onfocus="changeSelectColor('iconMail');" onblur="changeOutMailColor(this,'iconMail');" placeholder="Email">
+            </div>
+            <div class="col-md-12">    
+                <span id="iconUser" class="fas fa-user fa-2x"></span>            
+                <input type="text" class="big" id="userName" onfocus="changeSelectColor('iconUser');" onblur="changeOutColor('iconUser');" placeholder="User name">
+            </div>
+            <div class="col-md-12">
+                <span id="iconPassword" class="fas fa-key fa-2x"></span>
+                <input type="password" class="big" onfocus="changeSelectColor('iconPassword');" onblur="changeOutColor('iconPassword');" placeholder="Password">
+            </div>
+            <div class="col-md-12">
+                    <span id="iconPassword2" class="fas fa-key fa-2x"></span>
+                    <input type="password" class="big" onfocus="changeSelectColor('iconPassword2');" onblur="changeOutColor('iconPassword2');" placeholder="Repeat Password">
+                </div>
+            <div class="col-md-12">
+                <a class="button button-primary outline" href="index.html" style="width: 20%; position: relative; left: 10px;"> login</a>
+                <a class="button button-success outline" href="index.html"  style="width: 20%; position: relative; left: 10px;">register</a>
+            </div>
+        </form>        
+    </div>
+<script type="text/javascript">
+    function changeSelectColor(id) {
+        document.getElementById(id).style.color = '#33C3F0';
+    }
+
+    function changeOutColor(id) {
+        document.getElementById(id).style.color = '#999';
+    }
+
+    function changeOutMailColor(element, id){
+        if(element.validity.valid)
+            document.getElementById(id).style.color = '#999';
+    }
+
+    function changeErrorColor(id) {
+        document.getElementById(id).style.color = '#c94c4c';
+    }
+
+    function checkStatus(element,id) {
+        if(!element.validity.valid){
+            changeErrorColor(id);
+        }
+        else {
+            changeSelectColor(id);
+        }        
+    }
+
+</script>
+</body>
+</html>
