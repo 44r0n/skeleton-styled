@@ -1472,6 +1472,9 @@ there.
 .navbar .icon {
   display: none; }
 
+.navbar .mobile {
+  display: none; }
+
 /* Add a black background color to the top navigation */
 .top {
   top: 0;
@@ -1520,15 +1523,9 @@ div.content {
   .top.responsive a {
     float: none;
     display: block;
-    text-align: left; }
+    text-align: center; }
   .top.responsive .dropdown {
-    float: none; }
-  .top.responsive .dropdown-content {
-    position: relative; }
-  .top.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left; } }
+    display: none; } }
 
 .navbar input[type=text] {
   width: 130px;
@@ -1828,10 +1825,6 @@ td {
 
 table.bordered th, table.bordered td {
   border: 1px solid #D1D1D1; }
-
-th:first-child,
-td:first-child {
-  padding-left: 0; }
 
 th:last-child,
 td:last-child {
