@@ -1072,12 +1072,42 @@ select.big {
   text-indent: 42px;
   border-width: 0 0 2px; }
 
+a.big {
+  width: 20%;
+  position: relative;
+  left: 10px; }
+
 span.fas {
   position: relative;
   left: 42px;
   color: #999;
   -webkit-transition: color 0.7s;
   transition: color 0.7s; }
+
+@media screen and (max-width: 600px) {
+  input[type="email"].big,
+  input[type="number"].big,
+  input[type="search"].big,
+  input[type="text"].big,
+  input[type="tel"].big,
+  input[type="url"].big,
+  input[type="password"].big,
+  textarea.big,
+  select.big {
+    font-size: 130%;
+    width: 80%;
+    text-indent: 42px;
+    border-width: 0 0 1px; }
+  a.big {
+    width: 80%;
+    position: relative;
+    left: 10px; }
+  span.fas {
+    position: relative;
+    left: 42px;
+    color: #999;
+    -webkit-transition: color 0.7s;
+    transition: color 0.7s; } }
 
 /* Invalid */
 input[type="email"]:invalid,
