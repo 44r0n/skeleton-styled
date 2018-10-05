@@ -73,6 +73,11 @@
     animation-duration: $transition-time;
 }
 
+.close-modal-content {
+    animation-name: zoomout;
+    animation-duration: $transition-time;
+}
+
 /* Styles for the modal image */ 
 #modalImage {
     display: block;
@@ -96,12 +101,17 @@
 /* Add Animation - Zoom in the Modal */
 .modal-caption {
     animation-name: zoom;
-    animation-duration: 0.6s;
+    animation-duration: $transition-time;
 }
 
 @keyframes zoom {
     from {transform:scale(0)}
     to {transform:scale(1)}
+}
+
+@keyframes zoomout {
+    from {transform: scale(1)}
+    to {transform: scale(0)}
 }
 
 
