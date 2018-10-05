@@ -1543,31 +1543,18 @@ there.
     animation-duration: $transition-time;
 }
 
-// .modal-image-close + .modal-content {
-//     width: auto;
-//     text-align: center;
-// }
+.close-modal-content {
+    animation-name: zoomout;
+    animation-duration: $transition-time;
+}
 
-#img01 {
+/* Styles for the modal image */ 
+#modalImage {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
-
-/* Add Animation */
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
-} 
-
-/* Modal Content (Image) */
-// .modal-content {
-//     margin: auto;
-//     display: block;
-//     width: 80%;
-//     max-width: 700px;
-// }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 .modal-caption {
@@ -1584,12 +1571,17 @@ there.
 /* Add Animation - Zoom in the Modal */
 .modal-caption {
     animation-name: zoom;
-    animation-duration: 0.6s;
+    animation-duration: $transition-time;
 }
 
 @keyframes zoom {
     from {transform:scale(0)}
     to {transform:scale(1)}
+}
+
+@keyframes zoomout {
+    from {transform: scale(1)}
+    to {transform: scale(0)}
 }
 
 

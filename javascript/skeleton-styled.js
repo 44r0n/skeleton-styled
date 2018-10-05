@@ -35,34 +35,42 @@ window.onclick = function(event) {
     }
   }
 } 
+var shownModal;
+
 function openModal(modalName){
-    document.getElementById(modalName).style.display = "block";
+    shownModal = document.getElementById(modalName);
+    shownModal.style.display = "block";
 }
 
 function closeModal(modalName) {
-    document.getElementById(modalName).style.display = "none";
+    shownModal = document.getElementById(modalName);
+    animationCloseModal(shownModal);
+}
+
+function animationCloseModal(elem) {    
+    elem.getElementsByClassName("modal-content")[0].className += ' close-modal-content';
+    setTimeout(hideModal,700);
+}
+
+function hideModal() {
+    shownModal.style.display = "none";
+    shownModal.getElementsByClassName("modal-content")[0].classList.remove("close-modal-content");
 }
 
 function openImageModal(elem, modalName) {
-    var modal = document.getElementById(modalName);
+    shownModal = document.getElementById(modalName);
     
-    modal.style.display = "block";
-    document.getElementById("img01").src = elem.src;
+    shownModal.style.display = "block";
+    document.getElementById("modalImage").src = elem.src;
     document.getElementById("modalCaption").innerHTML = elem.alt;
 }
 
-// // Get the modal
-// var modal = document.getElementById('myModal');
-
-// // Get the image and insert it inside the modal - use its "alt" text as a caption
-// var img = document.getElementById('myImg');
-// var modalImg = document.getElementById("img01");
-// var captionText = document.getElementById("caption");
-// img.onclick = function(){
-//     modal.style.display = "block";
-//     modalImg.src = this.src;
-//     captionText.innerHTML = this.alt;
-// }
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == shownModal) {
+        animationCloseModal(shownModal);
+    }
+}
 var  defaultSidebarWidth = document.getElementsByClassName("navbar side")[0].currentStyle || window.getComputedStyle(document.getElementsByClassName("navbar side")[0]);
 
 
