@@ -7,6 +7,7 @@
 .progress {
     height: 5px;
     border-radius: $border-radius;
+    transition: all $transition-time $transition-type;
 }
 .progress.primary {
     background-color: $blue;
@@ -23,5 +24,5 @@
 .progress.dark {
     background-color: $grey;
 }
-
+  
 
