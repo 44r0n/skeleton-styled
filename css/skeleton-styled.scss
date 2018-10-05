@@ -1824,6 +1824,7 @@ div.content {
 .progress {
     height: 5px;
     border-radius: $border-radius;
+    transition: all $transition-time $transition-type;
 }
 .progress.primary {
     background-color: $blue;
@@ -1840,7 +1841,7 @@ div.content {
 .progress.dark {
     background-color: $grey;
 }
-
+  
 
 
 /* Slideshow container */

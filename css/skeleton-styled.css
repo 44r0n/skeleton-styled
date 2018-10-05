@@ -1728,7 +1728,9 @@ div.content {
 
 .progress {
   height: 5px;
-  border-radius: 4px; }
+  border-radius: 4px;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out; }
 
 .progress.primary {
   background-color: #33C3F0; }
