@@ -1748,6 +1748,8 @@ div.content {
 /* Hide the images by default */
 .mySlides {
   display: none; }
+  .mySlides img {
+    border-radius: 4px; }
 
 /* Next & previous buttons */
 .prev, .next {

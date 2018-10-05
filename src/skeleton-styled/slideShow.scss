@@ -1,3 +1,5 @@
+@import 'src/sizes.scss';
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
@@ -8,6 +10,10 @@
 /* Hide the images by default */
 .mySlides {
     display: none;
+
+    img {
+      border-radius: $border-radius;
+    }
 }
 
 /* Next & previous buttons */
