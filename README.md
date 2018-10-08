@@ -54,7 +54,7 @@ Gulp setup based on: simple-gulp-setup (https://github.com/andreobriennz/simple-
 - Skeleton (http://getskeleton.com/)
 - Flexbox-Grid (https://github.com/kristoferjoseph/flexboxgrid)
 - Normalize 8.0.0 (https://necolas.github.io/normalize.css/)
-- Fontawesome (https://fontawesome.com/)
+- Fontawesome 5.3.1 (https://fontawesome.com/)
 
 ## Contributing
 
