@@ -366,7 +366,7 @@ $clear-blue: #e1f0ff;
 
 //Black colors
 $clear-black: #222;
-$black-opacity: rgba(0,0,0,0.4);
+$black-opacity: rgba(0,0,0,0.6);
 // Grey colors
 $dark-grey: #444;
 $grey: #555;
@@ -1502,7 +1502,7 @@ there.
     position: absolute;
     top: 15px;
     right: 35px;
-    color: $clear-grey;
+    color: $dark-white;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
