@@ -1412,7 +1412,7 @@ there.
   /* Enable scroll if needed */
   background-color: #222;
   /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   /* Black w/ opacity */ }
 
 /* The Close Button */
@@ -1433,7 +1433,7 @@ there.
   position: absolute;
   top: 15px;
   right: 35px;
-  color: #999;
+  color: #D1D1D1;
   font-size: 40px;
   font-weight: bold;
   -webkit-transition: 0.3s;
@@ -1466,8 +1466,8 @@ there.
   border: 1px solid #222;
   border-radius: 7px;
   width: 80%;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
   -webkit-animation-name: zoom;
   animation-name: zoom;
   -webkit-animation-duration: 0.7s;
