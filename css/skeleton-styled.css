@@ -1412,7 +1412,7 @@ there.
   /* Enable scroll if needed */
   background-color: #222;
   /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   /* Black w/ opacity */ }
 
 /* The Close Button */
@@ -1433,7 +1433,7 @@ there.
   position: absolute;
   top: 15px;
   right: 35px;
-  color: #999;
+  color: #D1D1D1;
   font-size: 40px;
   font-weight: bold;
   -webkit-transition: 0.3s;
@@ -1466,36 +1466,26 @@ there.
   border: 1px solid #222;
   border-radius: 7px;
   width: 80%;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
   -webkit-animation-name: zoom;
   animation-name: zoom;
   -webkit-animation-duration: 0.7s;
   animation-duration: 0.7s; }
 
-#img01 {
+.close-modal-content {
+  -webkit-animation-name: zoomout;
+  animation-name: zoomout;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s; }
+
+/* Styles for the modal image */
+#modalImage {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%; }
 
-/* Add Animation */
-@-webkit-keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0; }
-  to {
-    top: 0;
-    opacity: 1; } }
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0; }
-  to {
-    top: 0;
-    opacity: 1; } }
-
-/* Modal Content (Image) */
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 .modal-caption {
   margin: auto;
@@ -1511,8 +1501,8 @@ there.
 .modal-caption {
   -webkit-animation-name: zoom;
   animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-duration: 0.6s; }
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s; }
 
 @-webkit-keyframes zoom {
   from {
@@ -1529,6 +1519,22 @@ there.
   to {
     -webkit-transform: scale(1);
     transform: scale(1); } }
+
+@-webkit-keyframes zoomout {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  to {
+    -webkit-transform: scale(0);
+    transform: scale(0); } }
+
+@keyframes zoomout {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  to {
+    -webkit-transform: scale(0);
+    transform: scale(0); } }
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {
@@ -1722,7 +1728,9 @@ div.content {
 
 .progress {
   height: 5px;
-  border-radius: 4px; }
+  border-radius: 4px;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out; }
 
 .progress.primary {
   background-color: #33C3F0; }
