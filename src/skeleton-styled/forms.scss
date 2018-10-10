@@ -216,13 +216,6 @@ input[type=range] {
     height: 15px;
     background: transparent !important;
     outline: none;
-    opacity: 0.7;
-    -webkit-transition: $transition-time;
-    transition: opacity $transition-time;
-}
-
-input[type=range]:hover {
-    opacity: 1;
 }
 
 input[type=range]::-webkit-range-thumb {
@@ -315,3 +308,34 @@ input[type=range]::-ms-track {
     color: transparent;
 }
 
+
+input[type="range"][multiple] {
+    display: block;
+  
+    pointer-events: none;
+  
+    &:nth-of-type(odd) + input[type="range"][multiple] {
+        margin-top: -32px;
+    }
+
+    &:nth-of-type(odd) + input[type=range][multiple]::-webkit-slider-runnable-track {
+        opacity: 0;  
+    }
+    
+    &:nth-of-type(odd) + input[type=range][multiple]::-moz-range-track {
+        opacity: 0;
+    }
+}
+
+@mixin multirange-thumb {
+  pointer-events: all;
+}
+input[type="range"]::-webkit-slider-thumb {
+  @include multirange-thumb;
+}
+input[type="range"]::-moz-range-thumb {
+  @include multirange-thumb;
+}
+input[type="range"]::-ms-thumb {
+  @include multirange-thumb;
+}
