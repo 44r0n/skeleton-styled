@@ -209,3 +209,133 @@ select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 black;
 }
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    background: transparent !important;
+    outline: none;
+}
+
+input[type=range]::-webkit-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: $white;
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: $white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type=range].primary::-webkit-range-thumb {
+    background: $blue;
+    border: 0;
+}
+
+input[type=range].primary::-moz-range-thumb {
+    background: $blue;
+    border: 0;
+}
+
+input[type=range].success::-webkit-range-thumb {
+    background: $green;
+    border: 0;
+}
+
+input[type=range].success::-moz-range-thumb {
+    background: $green;
+    border: 0;
+}
+
+input[type=range].warning::-webkit-range-thumb {
+    background: $yellow;
+    border: 0;
+}
+
+input[type=range].warning::-moz-range-thumb {
+    background: $yellow;
+    border: 0;
+}
+
+input[type=range].danger::-webkit-range-thumb {
+    background: $red;
+    border: 0;
+}
+
+input[type=range].danger::-moz-range-thumb {
+    background: $red;
+    border: 0;
+}
+
+input[type=range].dark::-webkit-range-thumb {
+    background: $dark-grey;
+    border: 0;
+}
+
+input[type=range].dark::-moz-range-thumb {
+    background: $dark-grey;
+    border: 0;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+
+    border-radius: $border-radius;
+  
+}
+  
+input[type=range]::-moz-range-track {
+
+    border-radius: $border-radius;
+
+}
+  
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+}
+
+
+input[type="range"][multiple] {
+    display: block;
+  
+    pointer-events: none;
+  
+    &:nth-of-type(odd) + input[type="range"][multiple] {
+        margin-top: -32px;
+    }
+
+    &:nth-of-type(odd) + input[type=range][multiple]::-webkit-slider-runnable-track {
+        opacity: 0;  
+    }
+    
+    &:nth-of-type(odd) + input[type=range][multiple]::-moz-range-track {
+        opacity: 0;
+    }
+}
+
+@mixin multirange-thumb {
+  pointer-events: all;
+}
+input[type="range"]::-webkit-slider-thumb {
+  @include multirange-thumb;
+}
+input[type="range"]::-moz-range-thumb {
+  @include multirange-thumb;
+}
+input[type="range"]::-ms-thumb {
+  @include multirange-thumb;
+}
