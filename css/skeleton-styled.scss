@@ -1854,6 +1854,10 @@ div.content {
 /* Hide the images by default */
 .mySlides {
     display: none;
+
+    img {
+      border-radius: $border-radius;
+    }
 }
 
 /* Next & previous buttons */
