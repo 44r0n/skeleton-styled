@@ -8,7 +8,8 @@
 /* Hide the images by default */
 .mySlides {
     display: none;
-
+    -webkit-animation-duration: $transition-time;
+    animation-duration: $transition-time;
     img {
       border-radius: $border-radius;
     }
@@ -67,10 +68,8 @@
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+  -webkit-animation-name: fade;  
+  animation-name: fade;  
 }
 
 @-webkit-keyframes fade {
@@ -81,4 +80,35 @@
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+/* Fading animation */
+.zoom {
+  -webkit-animation-name: zoom;
+  animation-name: zoom;
+}
+
+.slide {
+  -webkit-animation-name: slide;  
+  animation-name: slide;  
+}
+
+@-webkit-keyframes slide {
+  from {
+    transform: translateX(100%); 
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(100%); 
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
