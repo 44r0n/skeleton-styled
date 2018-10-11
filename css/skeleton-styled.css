@@ -1852,7 +1852,9 @@ div.content {
 
 /* Hide the images by default */
 .mySlides {
-  display: none; }
+  display: none;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s; }
   .mySlides img {
     border-radius: 4px; }
 
@@ -1900,9 +1902,7 @@ div.content {
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s; }
+  animation-name: fade; }
 
 @-webkit-keyframes fade {
   from {
@@ -1915,6 +1915,31 @@ div.content {
     opacity: .4; }
   to {
     opacity: 1; } }
+
+/* Fading animation */
+.zoom {
+  -webkit-animation-name: zoom;
+  animation-name: zoom; }
+
+.slide {
+  -webkit-animation-name: slide;
+  animation-name: slide; }
+
+@-webkit-keyframes slide {
+  from {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+@keyframes slide {
+  from {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
