@@ -79,6 +79,46 @@
 	}
 }
 
+@-webkit-keyframes slideLeft {
+    from {
+      transform: translate(-100%, -50%)
+    }
+  
+    to {
+      transform: translate(0%,-50%);
+    }
+  }
+  
+@keyframes slideLeft {
+	from {
+		transform: translate(-100%, -50%) 
+	}
+
+	to {
+		transform: translate(0%,-50%);
+	}
+}
+
+@-webkit-keyframes slideLeftOut {
+    from {
+      transform: translate(0%, -50%)
+    }
+  
+    to {
+      transform: translate(-100%,-50%);
+    }
+  }
+  
+@keyframes slideLeftOut {
+	from {
+		transform: translate(0%, -50%) 
+	}
+
+	to {
+		transform: translate(-100%,-50%);
+	}
+}
+
   @-webkit-keyframes fade {
     from {opacity: .4}
     to {opacity: 1}

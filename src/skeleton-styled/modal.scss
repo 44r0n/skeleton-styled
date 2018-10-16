@@ -76,6 +76,11 @@
     animation-name: zoomCenter;
 }
 
+.modal-center.close-modal-content {
+    animation-name: zoomout;
+    animation-duration: $transition-time;
+}
+
 .modal-top {
     top: 0%;
     left: 50%;
@@ -88,13 +93,19 @@
     animation-duration: $transition-time;
 }
 
-.modal-lg {
-    width: 80%;
+.modal-left {
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    animation-name: slideLeft;
 }
 
-.modal-center.close-modal-content {
-    animation-name: zoomout;
+.modal-left.close-modal-content {
+    animation-name: slideLeftOut;
     animation-duration: $transition-time;
+}
+.modal-lg {
+    width: 80%;
 }
 
 /* Styles for the modal image */ 
