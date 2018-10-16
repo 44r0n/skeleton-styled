@@ -119,6 +119,7 @@
                     <hr />
                     <button class="button-dark outline" onclick="openModal('myModal');">open modal</button>
                     <button class="button-success outline" onclick="openModal('modalAlert');">open alert modal</button>
+                    <button class="button-primary outline" onclick="openModal('modalTop');">open top modal</button>
                 </div>
             </div>
             <div class="row">                
@@ -268,6 +269,15 @@
         <div class="modal-header"><span class="closebtn" onclick="closeModal('modalAlert');">&times;</span></div>
         <div class="modal-body">
             This is an alert modal.
+        </div>
+    </div>
+</div>
+
+<div id="modalTop" class="modal">
+    <div class="modal-content modal-top modal-lg primary">
+        <div class="modal-header"><span class="closebtn" onclick="closeModal('modalTop');">&times;</span></div>
+        <div class="modal-body">
+            This is an alert modal on the top of the page.
         </div>
     </div>
 </div>
