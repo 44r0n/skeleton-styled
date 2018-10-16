@@ -89,7 +89,7 @@
 }
 
 .modal-top.close-modal-content{
-    animation-name: slideTopOut;
+    animation-name: slideDown;
     animation-duration: $transition-time;
 }
 
@@ -101,11 +101,49 @@
 }
 
 .modal-left.close-modal-content {
-    animation-name: slideLeftOut;
+    animation-name: slideRight;
     animation-duration: $transition-time;
 }
+
+.modal-right {
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+    animation-name: slideRight;
+}
+
+.modal-right.close-modal-content {
+    animation-name: slideLeft;
+    animation-duration: $transition-time;
+}
+
+.modal-bottom {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    animation-name: slideDown;
+}
+
+.modal-bottom.close-modal-content {
+    animation-name: slideTop;
+    animation-duration: $transition-time;
+}
+
 .modal-lg {
     width: 80%;
+}
+
+.modal-md {
+    width: 50%;
+}
+
+.modal.sm {
+    width: 20%;
+}
+
+.modal-fullscreen{
+    width: 100%;
+    height: 100%;
 }
 
 /* Styles for the modal image */ 

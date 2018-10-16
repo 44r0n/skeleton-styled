@@ -59,7 +59,7 @@
 	}
 }
 
-@-webkit-keyframes slideTopOut {
+@-webkit-keyframes slideDown {
     from {
       transform: translate(-50%, 0%)
     }
@@ -69,7 +69,7 @@
     }
   }
   
-@keyframes slideTopOut {
+@keyframes slideDown {
 	from {
 		transform: translate(-50%, 0%) 
 	}
@@ -99,7 +99,7 @@
 	}
 }
 
-@-webkit-keyframes slideLeftOut {
+@-webkit-keyframes slideRight {
     from {
       transform: translate(0%, -50%)
     }
@@ -109,7 +109,7 @@
     }
   }
   
-@keyframes slideLeftOut {
+@keyframes slideRight {
 	from {
 		transform: translate(0%, -50%) 
 	}
