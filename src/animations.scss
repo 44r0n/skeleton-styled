@@ -29,15 +29,55 @@
     }
   }
   
-  @keyframes slide {
+@keyframes slide {
+	from {
+		transform: translateX(100%); 
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+@-webkit-keyframes slideTop {
     from {
-      transform: translateX(100%); 
+      transform: translate(-50%, -100%)
     }
   
     to {
-      transform: translateX(0);
+      transform: translate(-50%,0%);
     }
   }
+  
+@keyframes slideTop {
+	from {
+		transform: translate(-50%, -100%) 
+	}
+
+	to {
+		transform: translate(-50%,0%);
+	}
+}
+
+@-webkit-keyframes slideTopOut {
+    from {
+      transform: translate(-50%, 0%)
+    }
+  
+    to {
+      transform: translate(-50%,-100%);
+    }
+  }
+  
+@keyframes slideTopOut {
+	from {
+		transform: translate(-50%, 0%) 
+	}
+
+	to {
+		transform: translate(-50%,-100%);
+	}
+}
 
   @-webkit-keyframes fade {
     from {opacity: .4}

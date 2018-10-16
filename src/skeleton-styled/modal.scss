@@ -76,11 +76,23 @@
     animation-name: zoomCenter;
 }
 
+.modal-top {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    animation-name: slideTop;
+}
+
+.modal-top.close-modal-content{
+    animation-name: slideTopOut;
+    animation-duration: $transition-time;
+}
+
 .modal-lg {
     width: 80%;
 }
 
-.close-modal-content {
+.modal-center.close-modal-content {
     animation-name: zoomout;
     animation-duration: $transition-time;
 }
