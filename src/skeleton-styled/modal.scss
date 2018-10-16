@@ -60,22 +60,90 @@
 
 /* Modal Content */
 .modal-content {
-    position: relative;
+    position: fixed;
     background-color: $white;
-    margin: auto;
-    margin-top: 5%;
-    // padding: $padding;
     border: 1px solid $clear-black;
     border-radius: 7px;
-    width: 80%;
     box-shadow: 0 4px 8px 0 $black-opacity,0 6px 20px 0 $black-opacity;
     animation-name: zoom;
     animation-duration: $transition-time;
 }
 
-.close-modal-content {
+.modal-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: zoomCenter;
+}
+
+.modal-center.close-modal-content {
     animation-name: zoomout;
     animation-duration: $transition-time;
+}
+
+.modal-top {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    animation-name: slideTop;
+}
+
+.modal-top.close-modal-content{
+    animation-name: slideDown;
+    animation-duration: $transition-time;
+}
+
+.modal-left {
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    animation-name: slideLeft;
+}
+
+.modal-left.close-modal-content {
+    animation-name: slideRight;
+    animation-duration: $transition-time;
+}
+
+.modal-right {
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+    animation-name: slideRight;
+}
+
+.modal-right.close-modal-content {
+    animation-name: slideLeft;
+    animation-duration: $transition-time;
+}
+
+.modal-bottom {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    animation-name: slideDown;
+}
+
+.modal-bottom.close-modal-content {
+    animation-name: slideTop;
+    animation-duration: $transition-time;
+}
+
+.modal-lg {
+    width: 80%;
+}
+
+.modal-md {
+    width: 50%;
+}
+
+.modal.sm {
+    width: 20%;
+}
+
+.modal-fullscreen{
+    width: 100%;
+    height: 100%;
 }
 
 /* Styles for the modal image */ 
@@ -103,18 +171,6 @@
     animation-name: zoom;
     animation-duration: $transition-time;
 }
-
-@keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-}
-
-@keyframes zoomout {
-    from {transform: scale(1)}
-    to {transform: scale(0)}
-}
-
-
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){

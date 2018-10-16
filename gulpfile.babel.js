@@ -12,12 +12,14 @@ const settings = {
     dist: 'css', 
     jsdist: 'javascript',
     styles: [ 
-        'src/normalize.scss',        
+        'src/normalize.scss', 
+        'src/flexbox-grid.scss',       
         'src/colors.scss',
         'src/sizes.scss',
+        'src/animations.scss',        
         'src/skeleton-styled/*',
         'src/element-colors.scss',        
-        'src/flexbox-grid.scss',
+        
     ],
     jsFiles: [
         'src/javascript/*.js'
