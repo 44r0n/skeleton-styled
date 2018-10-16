@@ -6,14 +6,23 @@
 }
 
 .card .body {
-    text-align: right;
-    float: right;
+    text-align: center;
+    float: center;
+}
+
+.card strong {
+    font-size: 3em;
+    padding-left: 12px;
 }
 
 @media (min-width: 300px) {
     .card {
         width: 100%;
     }
+    // .card strong {
+    //     font-size: 1em;
+    //     padding-left: 0%;
+    // }
 }
 
 @media (min-width: 720px) {
