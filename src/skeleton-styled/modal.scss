@@ -60,17 +60,24 @@
 
 /* Modal Content */
 .modal-content {
-    position: relative;
+    position: fixed;
     background-color: $white;
-    margin: auto;
-    margin-top: 5%;
-    // padding: $padding;
     border: 1px solid $clear-black;
     border-radius: 7px;
-    width: 80%;
     box-shadow: 0 4px 8px 0 $black-opacity,0 6px 20px 0 $black-opacity;
     animation-name: zoom;
     animation-duration: $transition-time;
+}
+
+.modal-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: zoomCenter;
+}
+
+.modal-lg {
+    width: 80%;
 }
 
 .close-modal-content {
@@ -103,18 +110,6 @@
     animation-name: zoom;
     animation-duration: $transition-time;
 }
-
-@keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-}
-
-@keyframes zoomout {
-    from {transform: scale(1)}
-    to {transform: scale(0)}
-}
-
-
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
