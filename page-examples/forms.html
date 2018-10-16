@@ -198,9 +198,191 @@
                         <input class="button-primary" value="Submit" type="submit" disabled>
                     </form>
                 </div>
+                <div class="col-md-6">
+                    <button class="button-dark outline" onclick="toggle('howtoForms');">How to do this form</button>
+                    <pre id="howtoForms" class="panel"><code>
+&lt;form&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-sm-6"&gt;
+        &lt;label for="exampleEmailInput"&gt;Your email&lt;/label&gt;
+        &lt;input class="u-full-width" 
+        placeholder="test@mailbox.com" id="exampleEmailInput" 
+        type="email"&gt;
+    &lt;/div&gt;
+    &lt;div class="col-sm-6"&gt;
+        &lt;label for="exampleRecipientInput"&gt;
+        Reason for contacting&lt;/label&gt;
+        &lt;select class="u-full-width" id="exampleRecipientInput"&gt;
+            &lt;option value="Option 1"&gt;Questions&lt;/option&gt;
+            &lt;option value="Option 2"&gt;Admiration&lt;/option&gt;
+            &lt;option value="Option 3"&gt;Can I get your number?
+            &lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;label for="exampleMessage"&gt;Message&lt;/label&gt;
+&lt;textarea class="u-full-width" placeholder="Hi Dave …" 
+id="exampleMessage"&gt;&lt;/textarea&gt;
+&lt;label class="example-send-yourself-copy"&gt;
+    &lt;label class="switch"&gt;
+        &lt;input class="switch" type="checkbox"&gt;
+        &lt;span class="slider round"&gt;&lt;/span&gt;
+        &nbsp;
+    &lt;/label&gt;
+    &lt;span class="label-body"&gt;Send a copy to yourself&lt;/span&gt;
+&lt;/label&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-sm-6"&gt;
+        &lt;label&gt;Checkboxes&lt;/label&gt;
+        &lt;label class="checkcontainer"&gt;One
+            &lt;input type="checkbox" checked="checked"&gt;
+            &lt;span class="check mark"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        
+        &lt;label class="checkcontainer"&gt;Two
+            &lt;input type="checkbox"&gt;
+            &lt;span class="check mark"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        
+        &lt;label class="checkcontainer"&gt;Three
+            &lt;input type="checkbox"&gt;
+            &lt;span class="check mark"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        
+        &lt;label class="checkcontainer"&gt;Four
+            &lt;input type="checkbox"&gt;
+            &lt;span class="check mark"&gt;&lt;/span&gt;
+        &lt;/label&gt; 
+    &lt;/div&gt;
+    &lt;div class="col-sm-6"&gt;
+        &lt;label&gt;Radiobuttons&lt;/label&gt;
+        &lt;label class="checkcontainer"&gt;One
+            &lt;input type="radio" checked="checked" name="radio"&gt;
+            &lt;span class="radio mark"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class="checkcontainer"&gt;Two
+            &lt;input type="radio" name="radio"&gt;
+            &lt;span class="radio mark"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class="checkcontainer"&gt;Three
+            &lt;input type="radio" name="radio"&gt;
+            &lt;span class="radio mark"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class="checkcontainer"&gt;Four
+            &lt;input type="radio" name="radio"&gt;
+            &lt;span class="radio mark"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;input class="button-primary" value="Submit" type="submit"&gt;
+&lt;/form&gt;
+                            
+                    </code></pre>
+                </div> 
+                <div class="col-md-6">
+                        <button class="button-dark outline" onclick="toggle('howtoDisabledForms');">How to do this disabled form</button>
+                        <pre id="howtoDisabledForms" class="panel"><code>
+&lt;form&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-sm-6"&gt;
+        &lt;label for="exampleDisabledInput"&gt;Disabled input&lt;/label&gt;
+        &lt;input class="u-full-width" id="exampleDisabledInput" 
+        type="text" placeholder="Disabled input" disabled&gt;
+    &lt;/div&gt;
+    &lt;div class="col-sm-6"&gt;
+        &lt;label for="exampleDisabledOption"&gt;
+        Disabled option&lt;/label&gt;
+        &lt;select class="u-full-width" 
+        id="exampleDisabledOption" disabled&gt;
+            &lt;option value="Option 1"&gt;Disabled option&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-sm-6"&gt;
+        &lt;label class="disabledSwitch"&gt;
+            &lt;label class="switch"&gt;
+                &lt;input class="switch" type="checkbox" disabled&gt;
+                &lt;span class="slider round"&gt;&lt;/span&gt;
+                &nbsp;
+            &lt;/label&gt;
+            &lt;span class="label-body"&gt;Disabled not checked&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="col-sm-6"&gt;
+        &lt;label class="disabledSwitch"&gt;
+            &lt;label class="switch"&gt;
+                &lt;input class="switch" type="checkbox" 
+                disabled checked&gt;
+                &lt;span class="slider round"&gt;&lt;/span&gt;
+                &nbsp;
+            &lt;/label&gt;
+            &lt;span class="label-body"&gt;Disabled checked&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;                                                    
+&lt;div class="row"&gt;
+    &lt;div class="col-sm-6"&gt;
+        &lt;label&gt;Disabled Checkboxes&lt;/label&gt;
+        &lt;label class="checkcontainer"&gt;One
+            &lt;input type="checkbox" checked="checked" disabled&gt;
+            &lt;span class="check mark"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        
+        &lt;label class="checkcontainer"&gt;Two
+            &lt;input type="checkbox" disabled&gt;
+            &lt;span class="check mark"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        
+        &lt;label class="checkcontainer"&gt;Three
+            &lt;input type="checkbox" disabled&gt;
+            &lt;span class="check mark"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        
+        &lt;label class="checkcontainer"&gt;Four
+            &lt;input type="checkbox" disabled&gt;
+            &lt;span class="check mark"&gt;&lt;/span&gt;
+        &lt;/label&gt; 
+    &lt;/div&gt;
+    &lt;div class="col-sm-6"&gt;
+        &lt;label&gt;Disabled Radiobuttons&lt;/label&gt;
+        &lt;label class="checkcontainer"&gt;One
+            &lt;input type="radio" checked="checked" name="radio" 
+            disabled&gt;
+            &lt;span class="radio mark"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class="checkcontainer"&gt;Two
+            &lt;input type="radio" name="radio" disabled&gt;
+            &lt;span class="radio mark"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class="checkcontainer"&gt;Three
+            &lt;input type="radio" name="radio" disabled&gt;
+            &lt;span class="radio mark"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class="checkcontainer"&gt;Four
+            &lt;input type="radio" name="radio" disabled&gt;
+            &lt;span class="radio mark"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;input class="button-primary" value="Submit" type="submit" 
+disabled&gt;
+&lt;/form&gt;                              
+                        </code></pre>
+                    </div>
             </div>
         </div>    
     </div>
 <script src="../javascript/skeleton-styled.min.js"></script>
+<script type="text/javascript">
+function toggle(elemName) {
+        var elem = document.getElementById(elemName);
+        if (elem.style.maxHeight) {
+            elem.style.maxHeight = null;
+        } else {
+            elem.style.maxHeight = elem.scrollHeight + "px";
+        }        
+    }
+</script>
 </body>
 </html>

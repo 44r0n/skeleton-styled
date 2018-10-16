@@ -63,7 +63,32 @@
                             <span class="tooltiptext">Tooltip text</span>
                         </div> </p>
                     </div>
-                </div>    
+                </div>
+                <div class="col-lg-12">
+                    <button class="button-dark outline" onclick="toggle('howtoTabs');">How to do these tabs</button>
+                    <pre id="howtoTabs" class="panel"><code>
+&lt;div class="tab"&gt;
+    &lt;a href="elements2.html"&gt;Text Tooltip&lt;/a&gt;
+    &lt;a class="active"&gt;Pagination&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- Tab content --&gt;
+&lt;div class="tabcontent"&gt;
+    &lt;h3&gt;Pagination&lt;/h3&gt;
+    &lt;div class="pagination"&gt;
+        &lt;a href="#"&gt;&laquo;&lt;/a&gt;
+        &lt;a href="#"&gt;1&lt;/a&gt;
+        &lt;a class="active" href="#"&gt;2&lt;/a&gt;
+        &lt;a href="#"&gt;3&lt;/a&gt;
+        &lt;a href="#"&gt;4&lt;/a&gt;
+        &lt;a href="#"&gt;5&lt;/a&gt;
+        &lt;a href="#"&gt;6&lt;/a&gt;
+        &lt;a href="#"&gt;&raquo;&lt;/a&gt;
+    &lt;/div&gt;    
+    &nbsp;                
+&lt;/div&gt;
+                    </code></pre>
+                </div> 
             </div>
             <div class="row" style="margin-top: 20px;">
                 <div class="col-lg-12">
@@ -86,29 +111,82 @@
                         </div> 
                     </div>
                 </div>
+                <div class="col-lg-12">
+                    <button class="button-dark outline" onclick="toggle('howtoAccordion');">How to do this accordion</button>
+                    <pre id="howtoAccordion" class="panel"><code>
+&lt;div class="accordion-container"&gt;
+    &lt;button class="button outline accordion"&gt;Section 1 &lt;i class="fas fa-plus"&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;div class="panel"&gt;
+        &lt;p&gt;Lorem ipsum...&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;button class="button outline accordion"&gt;Section 2 &lt;i class="fas fa-plus"&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;div class="panel"&gt;
+        &lt;p&gt;Lorem ipsum...&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;button class="button outline accordion"&gt;Section 3 &lt;i class="fas fa-plus"&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;div class="panel"&gt;
+        &lt;p&gt;Lorem ipsum...&lt;/p&gt;
+    &lt;/div&gt; 
+&lt;/div&gt;
+                    </code></pre>
+                </div> 
             </div>
             <div class="row" style="margin-top: 20px;">
-                <div class="col-lg-12">
-                    <h2>Range input</h2>
-                    <hr />
-                    <input type="range" min="1" max="100" value="50" >
-                    <input type="range" min="1" max="100" value="50" class="primary">
-                    <input type="range" min="1" max="100" value="50" class="success">
-                    <input type="range" min="1" max="100" value="50" class="warning">
-                    <input type="range" min="1" max="100" value="50" class="danger">
-                    <input type="range" min="1" max="100" value="50" class="dark">
-                    <h2>Multi range input</h2>
-                    <hr />
-                    <input multiple type="range" min="1" max="100" data-values="50 90" >
-                    <input multiple type="range" min="1" max="100" data-values="50 90" class="primary">
-                    <input multiple type="range" min="1" max="100" data-values="50 90" class="success">
-                    <input multiple type="range" min="1" max="100" data-values="50 90" class="warning">
-                    <input multiple type="range" min="1" max="100" data-values="50 90" class="danger">
-                    <input multiple type="range" min="1" max="100" data-values="50 90" class="dark">
+                    <div class="col-lg-12">
+                        <h2>Range input</h2>
+                        <hr />
+                        <input type="range" min="1" max="100" value="50" >
+                        <input type="range" min="1" max="100" value="50" class="primary">
+                        <input type="range" min="1" max="100" value="50" class="success">
+                        <input type="range" min="1" max="100" value="50" class="warning">
+                        <input type="range" min="1" max="100" value="50" class="danger">
+                        <input type="range" min="1" max="100" value="50" class="dark">
+                        <div class="col-lg-12">
+                            <button class="button-dark outline" onclick="toggle('howtoRange');">How to do these ranges</button>
+                            <pre id="howtoRange" class="panel"><code>
+&lt;input type="range" min="1" max="100" value="50" &gt;
+&lt;input type="range" min="1" max="100" value="50" class="primary"&gt;
+&lt;input type="range" min="1" max="100" value="50" class="success"&gt;
+&lt;input type="range" min="1" max="100" value="50" class="warning"&gt;
+&lt;input type="range" min="1" max="100" value="50" class="danger"&gt;
+&lt;input type="range" min="1" max="100" value="50" class="dark"&gt;
+                            </code></pre>
+                        </div>
+                        <h2>Multi range input</h2>
+                        <hr />
+                        <input multiple type="range" min="1" max="100" data-values="50 90" >
+                        <input multiple type="range" min="1" max="100" data-values="50 90" class="primary">
+                        <input multiple type="range" min="1" max="100" data-values="50 90" class="success">
+                        <input multiple type="range" min="1" max="100" data-values="50 90" class="warning">
+                        <input multiple type="range" min="1" max="100" data-values="50 90" class="danger">
+                        <input multiple type="range" min="1" max="100" data-values="50 90" class="dark">
+                        <div class="col-lg-12">
+                            <button class="button-dark outline" onclick="toggle('howtoMultiRange');">How to do these multi ranges</button>
+                            <pre id="howtoMultiRange" class="panel"><code>
+&lt;input multiple type="range" min="1" max="100" data-values="50 90" &gt;
+&lt;input multiple type="range" min="1" max="100" data-values="50 90" class="primary"&gt;
+&lt;input multiple type="range" min="1" max="100" data-values="50 90" class="success"&gt;
+&lt;input multiple type="range" min="1" max="100" data-values="50 90" class="warning"&gt;
+&lt;input multiple type="range" min="1" max="100" data-values="50 90" class="danger"&gt;
+&lt;input multiple type="range" min="1" max="100" data-values="50 90" class="dark"&gt;
+                            </code></pre>
+                        </div>
+                    </div>
                 </div>
-            </div>
         </div>
     </div>
-<script src="../javascript/skeleton-styled.js"></script>
+<script src="../javascript/skeleton-styled.min.js"></script>
+<script type="text/javascript">
+function toggle(elemName) {
+        var elem = document.getElementById(elemName);
+        if (elem.style.maxHeight) {
+            elem.style.maxHeight = null;
+        } else {
+            elem.style.maxHeight = elem.scrollHeight + "px";
+        }        
+    }
+</script>
 </body>
 </html>
