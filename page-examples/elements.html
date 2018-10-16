@@ -120,6 +120,7 @@
                     <button class="button-dark outline" onclick="openModal('myModal');">open modal</button>
                     <button class="button-success outline" onclick="openModal('modalAlert');">open alert modal</button>
                     <button class="button-primary outline" onclick="openModal('modalTop');">open top modal</button>
+                    <button class="button-warning outline" onclick="openModal('modalLeft');">open left modal</button>
                 </div>
             </div>
             <div class="row">                
@@ -280,6 +281,25 @@
             This is an alert modal on the top of the page.
         </div>
     </div>
+</div>
+
+<div id="modalLeft" class="modal">
+    <div class="modal-content modal-left">
+        <div class="modal-header">
+            <span class="close" onclick="closeModal('modalLeft');">&times;</span>
+            <h2>Left Modal</h2>
+        </div>
+        <div class="modal-body">
+            <p>This modal appears from the left</p>
+            
+        </div>
+        <div class="modal-footer">
+            <h3>Footer</h3>
+            <div  style="text-align: right;">
+                <button class="button-danger" onclick="closeModal('modalLeft');">Close</button>
+            </div>
+        </div>
+    </div> 
 </div>
 
 
