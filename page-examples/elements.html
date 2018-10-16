@@ -121,6 +121,8 @@
                     <button class="button-success outline" onclick="openModal('modalAlert');">open alert modal</button>
                     <button class="button-primary outline" onclick="openModal('modalTop');">open top modal</button>
                     <button class="button-warning outline" onclick="openModal('modalLeft');">open left modal</button>
+                    <button class="button-danger outline" onclick="openModal('modalRight');">open right modal</button>
+                    <button class="button outline" onclick="openModal('modalBottom');">open bottom modal</button>
                 </div>
             </div>
             <div class="row">                
@@ -247,7 +249,7 @@
     </div>
 
 <div id="myModal" class="modal">
-    <div class="modal-content modal-center modal-lg">
+    <div class="modal-content modal-center modal-fullscreen">
         <div class="modal-header">
             <span class="close" onclick="closeModal('myModal');">&times;</span>
             <h2>Modal Header</h2>
@@ -297,6 +299,44 @@
             <h3>Footer</h3>
             <div  style="text-align: right;">
                 <button class="button-danger" onclick="closeModal('modalLeft');">Close</button>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<div id="modalRight" class="modal">
+    <div class="modal-content modal-right modal-sm">
+        <div class="modal-header">
+            <span class="close" onclick="closeModal('modalRight');">&times;</span>
+            <h2>Right Modal</h2>
+        </div>
+        <div class="modal-body">
+            <p>This modal appears from the right</p>
+            
+        </div>
+        <div class="modal-footer">
+            <h3>Footer</h3>
+            <div  style="text-align: right;">
+                <button class="button-danger" onclick="closeModal('modalRight');">Close</button>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<div id="modalBottom" class="modal">
+    <div class="modal-content modal-bottom modal-md">
+        <div class="modal-header">
+            <span class="close" onclick="closeModal('modalBottom');">&times;</span>
+            <h2>Bottom Modal</h2>
+        </div>
+        <div class="modal-body">
+            <p>This modal appears from the bottom</p>
+            
+        </div>
+        <div class="modal-footer">
+            <h3>Footer</h3>
+            <div  style="text-align: right;">
+                <button class="button-danger" onclick="closeModal('modalBottom');">Close</button>
             </div>
         </div>
     </div> 
