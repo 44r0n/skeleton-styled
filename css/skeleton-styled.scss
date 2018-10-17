@@ -1516,6 +1516,7 @@ $margin: 10px; //margin for progressbar, cards, alerts,
 
 .accordion-container {
     border-radius: $border-radius;
+    margin: 2%;
 }
 
 /* Style the accordion panel. Note: hidden by default */
@@ -2045,14 +2046,23 @@ input[type="button"].button-dark.outline:disabled {
 }
 
 .card .body {
-    text-align: right;
-    float: right;
+    text-align: center;
+    float: center;
+}
+
+.card strong {
+    font-size: 3em;
+    padding-left: 12px;
 }
 
 @media (min-width: 300px) {
     .card {
         width: 100%;
     }
+    // .card strong {
+    //     font-size: 1em;
+    //     padding-left: 0%;
+    // }
 }
 
 @media (min-width: 720px) {
@@ -2668,6 +2678,7 @@ input[type="range"]::-ms-thumb {
     border-radius: $border-radius;
     background-color: $dark-white;
     padding: $padding;
+    margin: 2%;
 }
 .loader {
     border: 5px solid $dark-white; 
@@ -2676,6 +2687,13 @@ input[type="range"]::-ms-thumb {
     width: 120px;
     height: 120px;
     animation: spin 2s linear infinite;
+    margin: 2%;
+}
+
+.loader.danger {
+    //border: 5px solid $dark-white; 
+    border-top: 5px solid $red;
+    background: transparent;    
 }
 
 @keyframes spin {
@@ -3406,8 +3424,7 @@ table.hover tr.dark:hover {
     border-top-left-radius: $border-radius;
     border-top: $border-width solid $dark-white;
     border-left: $border-width solid $dark-white;
-    border-right: $border-width solid $dark-white;
-    
+    border-right: $border-width solid $dark-white;    
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -3453,6 +3470,7 @@ table.hover tr.dark:hover {
     border-top: none;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
+    margin-bottom: 2%;
 } 
  /* Tooltip container */
  .tooltip {
