@@ -1,7 +1,8 @@
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 table {
-    border-collapse: collapse;
+    *border-collapse: collapse;
+    border-spacing: 0;
 }
 
 th,
@@ -9,6 +10,17 @@ td {
     padding: 12px 15px;
     text-align: left;
     border-bottom: $border-width solid $dark-white; }
+
+table.bordered tr:last-child td:first-child {
+    border-bottom-left-radius: 4px;
+}
+
+table.bordered tr:last-child td:last-child {
+    -moz-border-bottom-right-radius: 50%;
+    -webkit-border-bottom-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
 table.bordered th, table.bordered td {
     border: $border-width solid $dark-white;
 }
