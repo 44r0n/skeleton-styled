@@ -7,8 +7,7 @@
     border-top-left-radius: $border-radius;
     border-top: $border-width solid $dark-white;
     border-left: $border-width solid $dark-white;
-    border-right: $border-width solid $dark-white;
-    
+    border-right: $border-width solid $dark-white;    
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -54,4 +53,5 @@
     border-top: none;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
+    margin-bottom: 2%;
 } 
