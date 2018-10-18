@@ -2937,7 +2937,14 @@ input:checked + .slider:before {
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 table {
-  border-collapse: collapse; }
+  *border-collapse: collapse;
+  border-spacing: 0; }
+
+table.bordered {
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  overflow: hidden; }
 
 th,
 td {
@@ -2946,7 +2953,10 @@ td {
   border-bottom: 1px solid #D1D1D1; }
 
 table.bordered th, table.bordered td {
-  border: 1px solid #D1D1D1; }
+  border-right: 1px solid #D1D1D1; }
+
+table.bordered th:last-child, table.bordered td:last-child {
+  border-right: 0; }
 
 th:last-child,
 td:last-child {

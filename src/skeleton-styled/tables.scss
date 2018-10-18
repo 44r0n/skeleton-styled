@@ -1,7 +1,15 @@
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 table {
-    border-collapse: collapse;
+    *border-collapse: collapse;
+    border-spacing: 0;    
+}
+
+table.bordered {
+    border: $border-width solid $dark-white;
+    border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    overflow: hidden;
 }
 
 th,
@@ -9,8 +17,13 @@ td {
     padding: 12px 15px;
     text-align: left;
     border-bottom: $border-width solid $dark-white; }
+
 table.bordered th, table.bordered td {
-    border: $border-width solid $dark-white;
+    border-right: $border-width solid $dark-white;
+}
+
+table.bordered th:last-child, table.bordered td:last-child {
+    border-right: 0;
 }
 
 th:last-child,
