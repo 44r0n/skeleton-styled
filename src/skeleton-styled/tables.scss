@@ -2,7 +2,14 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 table {
     *border-collapse: collapse;
-    border-spacing: 0;
+    border-spacing: 0;    
+}
+
+table.bordered {
+    border: $border-width solid $dark-white;
+    border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    overflow: hidden;
 }
 
 th,
@@ -11,18 +18,12 @@ td {
     text-align: left;
     border-bottom: $border-width solid $dark-white; }
 
-table.bordered tr:last-child td:first-child {
-    border-bottom-left-radius: 4px;
-}
-
-table.bordered tr:last-child td:last-child {
-    -moz-border-bottom-right-radius: 50%;
-    -webkit-border-bottom-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-}
-
 table.bordered th, table.bordered td {
-    border: $border-width solid $dark-white;
+    border-right: $border-width solid $dark-white;
+}
+
+table.bordered th:last-child, table.bordered td:last-child {
+    border-right: 0;
 }
 
 th:last-child,
