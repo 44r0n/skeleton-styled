@@ -19,15 +19,22 @@
     .card {
         width: 100%;
     }
-    // .card strong {
-    //     font-size: 1em;
-    //     padding-left: 0%;
-    // }
+    .card strong {
+        font-size: 3em;
+        padding-left: 20%;
+    }
 }
 
 @media (min-width: 720px) {
     .card i.fas{
         font-size: 3em;
+    }  
+}
+
+@media (min-width: 1280px) {
+    .card strong {
+        font-size: 3em;
+        padding-left: 5px;
     }
 }
 
