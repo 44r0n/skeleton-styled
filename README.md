@@ -3,12 +3,12 @@
 [![PRs welcome](https://img.shields.io/badge/pull_requests-welcome-brightgreen.svg)](http://makeapullrequest.com/)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/44r0n/skeleton-styled/issues)
 [![npm](https://img.shields.io/npm/v/skeleton-styled.svg)](https://www.npmjs.com/package/skeleton-styled)
-[![GitHub (pre-)release](https://img.shields.io/github/release/44r0n/skeleton-styled/all.svg)](https://github.com/44r0n/skeleton-styled/releases)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/44r0n/skeleton-styled.svg)](https://github.com/44r0n/skeleton-styled)
 ![npm](https://img.shields.io/npm/dt/skeleton-styled.svg)
 
 ---
 
-# skeleton-styled 1.0.0-beta
+# skeleton-styled 1.0.0
 
 skeleton-styled is a fork of [skeleton-flexbox](https://github.com/andreobriennz/skeleton-flexbox). Basically is the same skeleton with flexbox added and more styles. Just a step forward to a framework trying to keep the css lightweight. 
 
@@ -39,7 +39,7 @@ Also, if you want the `javascript` features, copy `skeleton-styled.js` or `skele
 
 1. `git clone https://github.com/44r0n/skeleton-styled.git`
 2. `npm i`
-3. `npm run gulp build` for a single build, or `npm run gulp` for auto-rerun when a file changes.
+3. `npm run gulp build` for a single build, or `npm run gulp` for auto-build when a file changes.
 
 ## Documentation
 
