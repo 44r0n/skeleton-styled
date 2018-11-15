@@ -1,0 +1,92 @@
+.selectpicker-dropdown-trigger-off {
+    color: black;
+	text-decoration: none;
+	height: $form-element-height;
+    padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+    background-color: transparent;
+    border-color: $clear-grey ;   
+    border-bottom-style: solid; //For safari rendering
+    box-sizing: border-box; 
+    border-width: 0 0 $border-width;
+    transition: border-color $transition-time;
+    border-radius: 0px; //For macos rendering.
+    caret-color: $clear-black;
+    width: 100%;
+    display: inline-block;
+	
+	-webkit-transition: border-color $transition-time ease;
+	-moz-transition: border-color $transition-time ease;
+	-o-transition: border-color $transition-time ease; 
+    transition: border-color $transition-time ease;
+    
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image:
+        linear-gradient(45deg, transparent 50%, $clear-grey 50%),
+        linear-gradient(135deg, $clear-grey 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        calc(100% - 2.5em) 0.5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+    background-repeat: no-repeat;
+}
+
+.selectpicker-dropdown-trigger-on {
+    color: black;
+	text-decoration: none;
+	height: $form-element-height;
+    padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+    background-color: transparent;
+    border-color: $clear-grey ;   
+    border-bottom-style: solid; //For safari rendering
+    box-sizing: border-box; 
+    border-width: 0 0 $border-width;
+    transition: border-color $transition-time;
+    border-radius: 0px; //For macos rendering.
+    border-color: $blue;
+    caret-color: $clear-black;
+    width: 100%;
+    display: inline-block;
+	
+	-webkit-transition: border-color $transition-time ease;
+	-moz-transition: border-color $transition-time ease;
+	-o-transition: border-color $transition-time ease; 
+    transition: border-color $transition-time ease;
+    
+    transition: border-color $transition-time;
+    transition: background-image $transition-time;
+    border-color: $blue;
+    background-image:
+        linear-gradient(45deg, $blue 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, $blue 50%);
+    background-position:
+        calc(100% - 15px) 1em,
+        calc(100% - 20px) 1em,
+        calc(100% - 2.5em) 0.5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em ;
+    background-repeat: no-repeat;
+    outline: 0;
+}
+
+.selectpicker-dropdown-trigger-on:hover {
+    color: black;
+}
+
+.selectpicker-dropdown-trigger-off:hover {
+    color: black;
+}
+
+.dropdown-selectpicker {
+    display: none;
+}
