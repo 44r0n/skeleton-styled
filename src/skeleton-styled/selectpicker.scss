@@ -14,10 +14,10 @@
     width: 100%;
     display: inline-block;
 	
-	-webkit-transition: border-color $transition-time ease;
-	-moz-transition: border-color $transition-time ease;
-	-o-transition: border-color $transition-time ease; 
-    transition: border-color $transition-time ease;
+	-webkit-transition: border-color $transition-time;
+	-moz-transition: border-color $transition-time;
+	-o-transition: border-color $transition-time; 
+    transition: border-color $transition-time;
     
     margin: 0;      
     -webkit-box-sizing: border-box;
@@ -43,23 +43,23 @@
     color: black;
 	text-decoration: none;
 	height: $form-element-height;
-    padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+    padding: 6px 10px;
     background-color: transparent;
     border-color: $clear-grey ;   
-    border-bottom-style: solid; //For safari rendering
+    border-bottom-style: solid; 
     box-sizing: border-box; 
     border-width: 0 0 $border-width;
     transition: border-color $transition-time;
-    border-radius: 0px; //For macos rendering.
+    border-radius: 0px; 
     border-color: $blue;
     caret-color: $clear-black;
     width: 100%;
     display: inline-block;
 	
-	-webkit-transition: border-color $transition-time ease;
-	-moz-transition: border-color $transition-time ease;
-	-o-transition: border-color $transition-time ease; 
-    transition: border-color $transition-time ease;
+	-webkit-transition: border-color $transition-time;
+	-moz-transition: border-color $transition-time;
+	-o-transition: border-color $transition-time; 
+    transition: border-color $transition-time;
     
     transition: border-color $transition-time;
     transition: background-image $transition-time;
@@ -89,4 +89,61 @@
 
 .dropdown-selectpicker {
     display: none;
+}
+
+.dropdown-selectpicker-visible {
+    height: auto;
+    position: absolute;
+}
+
+.dropcontainer ul {
+	z-index: 1000;
+	overflow: visible;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	border: 1px solid $dark-white;
+	border-bottom-right-radius: $border-radius;
+	border-bottom-left-radius: $border-radius;
+	border-top: none;
+	background: $white;
+	list-style-type: none;
+	padding: 0;
+    margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.dropcontainer ul li {
+	padding: 5px;
+	-webkit-transition: all $transition-time; 
+	-moz-transition: all $transition-time; 
+	-o-transition: all $transition-time; 
+    transition: all $transition-time;
+    border-radius: $border-radius;
+    margin: 0;
+}
+
+.dropcontainer ul li:hover {
+	background: $dark-blue;
+    outline: none;
+}
+
+.dropcontainer ul li:hover a {
+    color: $white;
+    -webkit-transition: all $transition-time; 
+	-moz-transition: all $transition-time; 
+	-o-transition: all $transition-time; 
+	transition: all $transition-time;
+}
+
+.dropcontainer ul li:first-child {
+	display: none;
+}
+
+.dropcontainer ul li:last-child {
+	border-bottom: none;
+}
+
+.dropcontainer a {
+    text-decoration: none;
 }
