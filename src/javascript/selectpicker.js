@@ -9,7 +9,6 @@ var dropdownopen='dropdown-selectpicker-visible';	// open dropdown
 function check(element,className)
 {
     return className === element.className;
-	// return new RegExp('\\b'+className+'\\b').test(element.className);
 }
 
 function addclass(element,newClass)
@@ -109,7 +108,9 @@ function createSelectpickers()
 			var hiddenfield = addInput(sels[i]);
 			var trigger = addAnchor(sels[i]);
 			
-			var replaceUL=document.createElement('ul');
+            var replaceUL=document.createElement('ul');
+            var width = sels[i].parentElement.offsetWidth+"px";
+            replaceUL.setAttribute("style","width:"+width);
 			addList(sels[i],hiddenfield,trigger,replaceUL);
 
 			addclass(replaceUL,dropdownclosed);
