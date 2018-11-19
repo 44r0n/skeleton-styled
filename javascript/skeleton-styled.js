@@ -134,7 +134,12 @@ function addInput(select){
 	hiddenfield.name=select.name;
 	hiddenfield.type='hidden';
 	hiddenfield.id=select.id;
-	hiddenfield.value=select.options[0].value;
+	if(select.hasAttribute("multiple")) {
+		hiddenfield.value = "";
+	} else {
+		hiddenfield.value=select.options[0].value;
+	}
+	
 	select.parentNode.insertBefore(hiddenfield,select)
 	return hiddenfield;
 }
@@ -146,7 +151,7 @@ function addAnchor(select) {
 	if (select.hasAttribute(disabledClass)) {
 		anchor.className += " " + disabledClass;
 	}
-	anchor.text = select.getAttribute('placeholder');
+	anchor.text = select.getAttribute('placeholder') ? select.getAttribute('placeholder') : "";
 	anchor.onclick=function(){
 		if (this.classList.contains(disabledClass)) return false;
 		swapclass(this,triggeroff,triggeron);
@@ -163,11 +168,11 @@ function addAnchor(select) {
 function addList(select, hiddenfield, trigger, replaceUL) {
 
 	for(var i=0;i<select.getElementsByTagName('option').length;i++) {
-		addElementToList(select.getElementsByTagName('option')[i],replaceUL,hiddenfield,trigger);
+		addElementToList(select.getElementsByTagName('option')[i],replaceUL,hiddenfield,trigger,select.hasAttribute("multiple"),select.getAttribute("placeholder"));
 	}
 }
 
-function addElementToList(opt,replaceUL,hiddenfield,trigger) {
+function addElementToList(opt,replaceUL,hiddenfield,trigger, multiple, placeholderText) {
 	var newli=document.createElement('li');
 	var newa=document.createElement('a');
 	newli.v=opt.value;
@@ -175,12 +180,54 @@ function addElementToList(opt,replaceUL,hiddenfield,trigger) {
 	newli.istrigger=trigger;
 	newa.href='#';
 	newa.appendChild(document.createTextNode(opt.text));
-	newli.onclick=function(){
-		this.elm.value=this.v;
-		swapclass(this.istrigger,triggeron,triggeroff);
-		swapclass(this.parentNode,dropdownopen,dropdownclosed)
-		this.istrigger.firstChild.nodeValue=this.firstChild.firstChild.nodeValue;
-		return false;
+	if (multiple) {
+		newli.onclick = function () {			
+			if(this.getElementsByTagName('i').length == 0) {
+				if(this.elm.value === "") {
+					this.elm.value = this.v;
+				} else {
+					this.elm.value += ", " + this.v;
+				}
+				var newIcon = document.createElement('i');
+				newIcon.className = "fas fa-check";		
+				this.appendChild(newIcon);
+
+				//TODO: better control structure.
+				if (this.istrigger.firstChild == null) {
+					this.istrigger.appendChild(document.createTextNode(this.firstChild.firstChild.nodeValue));
+					return false;
+				} 
+				if (this.istrigger.firstChild.nodeValue === placeholderText) {
+					this.istrigger.firstChild.nodeValue=this.firstChild.firstChild.nodeValue;
+					return false;
+				} 
+				
+				this.istrigger.firstChild.nodeValue += ", " + this.firstChild.firstChild.nodeValue;
+				return false;
+				
+			} else {
+				this.elm.value = this.elm.value.replace(", " + this.v,"");
+				this.elm.value = this.elm.value.replace(this.v+", ","");
+				this.elm.value = this.elm.value.replace(this.v,"");
+				this.removeChild(this.getElementsByTagName('i')[0]);
+				this.istrigger.firstChild.nodeValue = this.istrigger.firstChild.nodeValue.replace(", " + this.firstChild.firstChild.nodeValue, "");
+				this.istrigger.firstChild.nodeValue = this.istrigger.firstChild.nodeValue.replace(this.firstChild.firstChild.nodeValue+", ", "");
+				this.istrigger.firstChild.nodeValue = this.istrigger.firstChild.nodeValue.replace(this.firstChild.firstChild.nodeValue,"");
+				if(this.istrigger.firstChild.nodeValue == "") this.istrigger.firstChild.nodeValue = placeholderText;
+			}
+			
+			
+			
+			return false;
+		}
+	} else {
+		newli.onclick=function(){
+			this.elm.value=this.v;
+			swapclass(this.istrigger,triggeron,triggeroff);
+			swapclass(this.parentNode,dropdownopen,dropdownclosed);
+			this.istrigger.firstChild.nodeValue=this.firstChild.firstChild.nodeValue;
+			return false;
+		}
 	}
 	newli.appendChild(newa);
 	replaceUL.appendChild(newli);

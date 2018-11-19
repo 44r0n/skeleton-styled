@@ -3343,12 +3343,25 @@ div.content {
 	transition: all $transition-time;
 }
 
+.dropcontainer ul li:hover .fas {
+    color: $white;
+    -webkit-transition: all $transition-time; 
+	-moz-transition: all $transition-time; 
+	-o-transition: all $transition-time; 
+	transition: all $transition-time;
+}
+
 .dropcontainer ul li:last-child {
 	border-bottom: none;
 }
 
 .dropcontainer a {
     text-decoration: none;
+}
+
+.dropcontainer .fas {
+    color: $blue;
+    float: right;
 }
 /* Slideshow container */
 .slideshow-container {
