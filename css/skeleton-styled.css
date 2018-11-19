@@ -2897,11 +2897,20 @@ div.content {
   -webkit-transition: all 0.7s;
   transition: all 0.7s; }
 
+.dropcontainer ul li:hover .fas {
+  color: #fff;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s; }
+
 .dropcontainer ul li:last-child {
   border-bottom: none; }
 
 .dropcontainer a {
   text-decoration: none; }
+
+.dropcontainer .fas {
+  color: #33C3F0;
+  float: right; }
 
 /* Slideshow container */
 .slideshow-container {
