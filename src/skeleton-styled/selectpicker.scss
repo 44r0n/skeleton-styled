@@ -136,10 +136,6 @@
 	transition: all $transition-time;
 }
 
-.dropcontainer ul li:first-child {
-	display: none;
-}
-
 .dropcontainer ul li:last-child {
 	border-bottom: none;
 }
