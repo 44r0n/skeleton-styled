@@ -6,6 +6,7 @@ var triggeron='selectpicker-dropdown-trigger-on'; 	// class for the active trigg
 var triggeroff='selectpicker-dropdown-trigger-off';	// class for the inactive trigger link
 var dropdownclosed='dropdown-selectpicker'; 		// closed dropdown
 var dropdownopen='dropdown-selectpicker-visible';	// open dropdown
+var disabledClass = 'disabled'
 
 function check(element,className) {
     return className === element.className;
@@ -13,7 +14,7 @@ function check(element,className) {
 
 function addclass(element,newClass) {
 	if(!check(element,newClass)){element.className+=element.className==''?newClass:' '+newClass;}
-}	
+}
 
 function swapclass(element,oldClass,newClass) {
 	var className=element.className;
@@ -34,15 +35,19 @@ function addInput(select){
 function addAnchor(select) {
 	var anchor=document.createElement('a');
 	addclass(anchor,triggeroff);
-	anchor.href='#';	
+	anchor.href='#';
+	if (select.hasAttribute(disabledClass)) {
+		anchor.className += " " + disabledClass;
+	}
 	anchor.text = select.getAttribute('placeholder');
 	anchor.onclick=function(){
+		if (this.classList.contains(disabledClass)) return false;
 		swapclass(this,triggeroff,triggeron);
 		swapclass(this.parentNode.getElementsByTagName('ul')[0],dropdownclosed,dropdownopen);
 		if(check(this,triggeron) && this.nextElementSibling.getElementsByTagName('input').length == 1) {
 			this.nextElementSibling.getElementsByTagName('input')[0].focus();
 		}
-		return false;		
+		return false;
 	}
 	select.parentNode.insertBefore(anchor,select);
 	return anchor;
@@ -51,7 +56,7 @@ function addAnchor(select) {
 function addList(select, hiddenfield, trigger, replaceUL) {
 
 	for(var i=0;i<select.getElementsByTagName('option').length;i++) {
-		addElementToList(select.getElementsByTagName('option')[i],replaceUL,hiddenfield,trigger);		
+		addElementToList(select.getElementsByTagName('option')[i],replaceUL,hiddenfield,trigger);
 	}
 }
 
@@ -63,7 +68,7 @@ function addElementToList(opt,replaceUL,hiddenfield,trigger) {
 	newli.istrigger=trigger;
 	newa.href='#';
 	newa.appendChild(document.createTextNode(opt.text));
-	newli.onclick=function(){ 
+	newli.onclick=function(){
 		this.elm.value=this.v;
 		swapclass(this.istrigger,triggeron,triggeroff);
 		swapclass(this.parentNode,dropdownopen,dropdownclosed)
@@ -87,7 +92,7 @@ function addSearchableList(select, hiddenfield, trigger, replaceUL) {
 		var caller = e.target || e.srcElement;
     	var filter =  caller.value.toUpperCase();
 		// Declare variables
-		var ul, li, a, i;		
+		var ul, li, a, i;
 		ul = caller.parentNode.parentNode;
 		li = ul.getElementsByTagName('li');
 
@@ -117,8 +122,8 @@ function turnListToDropdown(ul) {
 		for(i=0;ul.getElementsByTagName('a').length;i++)
 		{
 			var newopt=document.createElement('option');
-			newopt.value=ul.getElementsByTagName('a')[i].href;	
-			newopt.appendChild(document.createTextNode(ul.getElementsByTagName('a')[i].innerHTML));	
+			newopt.value=ul.getElementsByTagName('a')[i].href;
+			newopt.appendChild(document.createTextNode(ul.getElementsByTagName('a')[i].innerHTML));
 			newselect.appendChild(newopt);
 		}
 		newselect.onchange=function()
@@ -132,7 +137,7 @@ function turnListToDropdown(ul) {
 
 function createSelectpickers() {
 	if(!document.getElementById && !document.createTextNode){return;}
-	
+
 
 /*
 	Turn all selects into DOM dropdowns
@@ -144,7 +149,7 @@ function createSelectpickers() {
 		if (sels[i].classList.contains(selectclass)) {
 			var hiddenfield = addInput(sels[i]);
 			var trigger = addAnchor(sels[i]);
-			
+
             var replaceUL=document.createElement('ul');
             var width = sels[i].parentElement.offsetWidth+"px";
 			replaceUL.setAttribute("style","width:"+width);
@@ -163,10 +168,10 @@ function createSelectpickers() {
 			count++;
 		}
 	}
-	
+
 /*
 	Turn all ULs with the class defined above into dropdown navigations
-*/	
+*/
 
 	var uls=document.getElementsByTagName('ul');
 	for(var i=0;i<uls.length;i++){
@@ -175,7 +180,7 @@ function createSelectpickers() {
 	for(i=0;i<count;i++){
 		toreplace[i].parentNode.removeChild(toreplace[i]);
 	}
-	
+
 }
 
 createSelectpickers();
