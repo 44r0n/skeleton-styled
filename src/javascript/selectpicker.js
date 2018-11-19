@@ -157,7 +157,7 @@ function addSearchableList(select, hiddenfield, trigger, replaceUL) {
 	replaceUL.appendChild(newDivInput);
 
 	for(var i=0;i<select.getElementsByTagName('option').length;i++) {
-		addElementToList(select.getElementsByTagName('option')[i],replaceUL,hiddenfield,trigger);
+		addElementToList(select.getElementsByTagName('option')[i],replaceUL,hiddenfield,trigger,select.hasAttribute("multiple"),select.getAttribute("placeholder"));
 	}
 }
 
