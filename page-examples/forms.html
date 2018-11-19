@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Get skeleton-styled</title>
 
-    <link rel="stylesheet" href="../css/skeleton-styled.min.css">    
+    <link rel="stylesheet" href="../css/skeleton-styled.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 <body>
     <div id="topnav" class= "navbar top">
         <a href="#home" class="active">Home</a>
         <a href="#news">News</a>
-        <a href="#contact">Contact</a> 
+        <a href="#contact">Contact</a>
         <a href="#about">About</a>
         <a href="https://github.com/44r0n/skeleton-styled/tree/master"><i class="fab fa-github"></i> Fork on Github</a>
         <a href="https://www.npmjs.com/package/skeleton-styled"><i class="fab fa-npm"></i> npm package</a>
@@ -21,10 +21,10 @@
         <a href="javascript:void(0);" class="icon" onclick="showTopNavBar('topnav')">
             <i class="fas fa-bars"></i>
         </a>
-        <input type="text" name="search" placeholder="Search.."> 
-        <button class="button-success" type="submit"><i class="fa fa-search"></i></button>  
+        <input type="text" name="search" placeholder="Search..">
+        <button class="button-success" type="submit"><i class="fa fa-search"></i></button>
         <div class="dropdown" style="float:right;">
-            <button class="button-primary right outline dropbtn" onclick="showContent('myDropdown')"><i class="fas fa-user"></i>&nbsp;<i class="fas fa-caret-down"></i></button>    
+            <button class="button-primary right outline dropbtn" onclick="showContent('myDropdown')"><i class="fas fa-user"></i>&nbsp;<i class="fas fa-caret-down"></i></button>
             <div id="myDropdown" class="dropdown-content">
                 <a href="#"><i class="fas fa-bell"></i> Notifications <span class="badge danger">2</span></a>
                 <a href="#"><i class="fas fa-cog"></i> Settings</a>
@@ -42,7 +42,7 @@
     <div class="content">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">                        
+                <div class="col-md-6">
                     <h1>Forms</h1>
                     <form>
                         <div class="row">
@@ -69,19 +69,29 @@
                             </label>
                             <span class="label-body">Send a copy to yourself</span>
                         </label>
-                        <div class="row">                    
+                        <div class="row">
                             <div class="col-sm-6">
                                 <p>
                                 <label class="label">Select an option:</label>
-                                <select class="selectpicker">
-                                    <option>Please select an option:</option>
-                                        <option>One</option>
-                                        <option>Two</option>
-                                        <option>Three</option>
-                                        <option>Four</option>
+                                <select class="selectpicker" placeholder="Pease select an option:">
+                                    <option>One</option>
+                                    <option>Two</option>
+                                    <option>Three</option>
+                                    <option>Four</option>
                                 </select>
                                 </p>
-                            </div>                            
+                            </div>
+                            <div class="col-sm-6">
+                                <p>
+                                <label class="label">Here you can search the option:</label>
+                                <select class="selectpicker search" placeholder="Please select an option:">
+                                    <option>Ketchup</option>
+                                    <option>Mustard</option>
+                                    <option>Barbecue</option>
+                                    <option>Mayonnaise</option>
+                                </select>
+                                </p>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
@@ -90,21 +100,21 @@
                                     <input type="checkbox" checked="checked">
                                     <span class="check mark"></span>
                                 </label>
-                                
+
                                 <label class="checkcontainer">Two
                                     <input type="checkbox">
                                     <span class="check mark"></span>
                                 </label>
-                                
+
                                 <label class="checkcontainer">Three
                                     <input type="checkbox">
                                     <span class="check mark"></span>
                                 </label>
-                                
+
                                 <label class="checkcontainer">Four
                                     <input type="checkbox">
                                     <span class="check mark"></span>
-                                </label> 
+                                </label>
                             </div>
                             <div class="col-sm-6">
                                 <label>Radiobuttons</label>
@@ -165,7 +175,31 @@
                                     <span class="label-body">Disabled checked</span>
                                 </label>
                             </div>
-                        </div>                                                    
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p>
+                                <label class="label">Select an option:</label>
+                                <select class="selectpicker" placeholder="Pease select an option:" disabled>
+                                    <option>One</option>
+                                    <option>Two</option>
+                                    <option>Three</option>
+                                    <option>Four</option>
+                                </select>
+                                </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p>
+                                <label class="label">Here you can search the option:</label>
+                                <select class="selectpicker search" placeholder="Please select an option:" disabled>
+                                    <option>Ketchup</option>
+                                    <option>Mustard</option>
+                                    <option>Barbecue</option>
+                                    <option>Mayonnaise</option>
+                                </select>
+                                </p>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-sm-6">
                                 <label>Disabled Checkboxes</label>
@@ -173,21 +207,21 @@
                                     <input type="checkbox" checked="checked" disabled>
                                     <span class="check mark"></span>
                                 </label>
-                                
+
                                 <label class="checkcontainer">Two
                                     <input type="checkbox" disabled>
                                     <span class="check mark"></span>
                                 </label>
-                                
+
                                 <label class="checkcontainer">Three
                                     <input type="checkbox" disabled>
                                     <span class="check mark"></span>
                                 </label>
-                                
+
                                 <label class="checkcontainer">Four
                                     <input type="checkbox" disabled>
                                     <span class="check mark"></span>
-                                </label> 
+                                </label>
                             </div>
                             <div class="col-sm-6">
                                 <label>Disabled Radiobuttons</label>
@@ -219,8 +253,8 @@
 &lt;div class="row"&gt;
     &lt;div class="col-sm-6"&gt;
         &lt;label for="exampleEmailInput"&gt;Your email&lt;/label&gt;
-        &lt;input class="u-full-width" 
-        placeholder="test@mailbox.com" id="exampleEmailInput" 
+        &lt;input class="u-full-width"
+        placeholder="test@mailbox.com" id="exampleEmailInput"
         type="email"&gt;
     &lt;/div&gt;
     &lt;div class="col-sm-6"&gt;
@@ -235,7 +269,7 @@
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;label for="exampleMessage"&gt;Message&lt;/label&gt;
-&lt;textarea class="u-full-width" placeholder="Hi Dave …" 
+&lt;textarea class="u-full-width" placeholder="Hi Dave …"
 id="exampleMessage"&gt;&lt;/textarea&gt;
 &lt;label class="example-send-yourself-copy"&gt;
     &lt;label class="switch"&gt;
@@ -245,19 +279,31 @@ id="exampleMessage"&gt;&lt;/textarea&gt;
     &lt;/label&gt;
     &lt;span class="label-body"&gt;Send a copy to yourself&lt;/span&gt;
 &lt;/label&gt;
-&lt;div class="row"&gt;                    
+&lt;div class="row"&gt;
     &lt;div class="col-sm-6"&gt;
         &lt;p&gt;
         &lt;label class="label"&gt;Select an option:&lt;/label&gt;
-        &lt;select class="selectpicker"&gt;
-            &lt;option&gt;Please select an option:&lt;/option&gt;
-                &lt;option&gt;One&lt;/option&gt;
-                &lt;option&gt;Two&lt;/option&gt;
-                &lt;option&gt;Three&lt;/option&gt;
-                &lt;option&gt;Four&lt;/option&gt;
+        &lt;select class="selectpicker" 
+            placeholder="Pease select an option:"&gt;
+            &lt;option&gt;One&lt;/option&gt;
+            &lt;option&gt;Two&lt;/option&gt;
+            &lt;option&gt;Three&lt;/option&gt;
+            &lt;option&gt;Four&lt;/option&gt;
         &lt;/select&gt;
         &lt;/p&gt;
-    &lt;/div&gt;                            
+    &lt;/div&gt;
+    &lt;div class="col-sm-6"&gt;
+        &lt;p&gt;
+        &lt;label class="label"&gt;Here you can search the option:&lt;/label&gt;
+        &lt;select class="selectpicker search" 
+            placeholder="Please select an option:"&gt;
+            &lt;option&gt;Ketchup&lt;/option&gt;
+            &lt;option&gt;Mustard&lt;/option&gt;
+            &lt;option&gt;Barbecue&lt;/option&gt;
+            &lt;option&gt;Mayonnaise&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;   
 &lt;/div&gt;
 &lt;div class="row"&gt;
     &lt;div class="col-sm-6"&gt;
@@ -266,21 +312,21 @@ id="exampleMessage"&gt;&lt;/textarea&gt;
             &lt;input type="checkbox" checked="checked"&gt;
             &lt;span class="check mark"&gt;&lt;/span&gt;
         &lt;/label&gt;
-        
+
         &lt;label class="checkcontainer"&gt;Two
             &lt;input type="checkbox"&gt;
             &lt;span class="check mark"&gt;&lt;/span&gt;
         &lt;/label&gt;
-        
+
         &lt;label class="checkcontainer"&gt;Three
             &lt;input type="checkbox"&gt;
             &lt;span class="check mark"&gt;&lt;/span&gt;
         &lt;/label&gt;
-        
+
         &lt;label class="checkcontainer"&gt;Four
             &lt;input type="checkbox"&gt;
             &lt;span class="check mark"&gt;&lt;/span&gt;
-        &lt;/label&gt; 
+        &lt;/label&gt;
     &lt;/div&gt;
     &lt;div class="col-sm-6"&gt;
         &lt;label&gt;Radiobuttons&lt;/label&gt;
@@ -304,9 +350,9 @@ id="exampleMessage"&gt;&lt;/textarea&gt;
 &lt;/div&gt;
 &lt;input class="button-primary" value="Submit" type="submit"&gt;
 &lt;/form&gt;
-                            
+
                     </code></pre>
-                </div> 
+                </div>
                 <div class="col-md-6">
                         <button class="button-dark outline" onclick="toggle('howtoDisabledForms');">How to do this disabled form</button>
                         <pre id="howtoDisabledForms" class="panel"><code>
@@ -314,13 +360,13 @@ id="exampleMessage"&gt;&lt;/textarea&gt;
 &lt;div class="row"&gt;
     &lt;div class="col-sm-6"&gt;
         &lt;label for="exampleDisabledInput"&gt;Disabled input&lt;/label&gt;
-        &lt;input class="u-full-width" id="exampleDisabledInput" 
+        &lt;input class="u-full-width" id="exampleDisabledInput"
         type="text" placeholder="Disabled input" disabled&gt;
     &lt;/div&gt;
     &lt;div class="col-sm-6"&gt;
         &lt;label for="exampleDisabledOption"&gt;
         Disabled option&lt;/label&gt;
-        &lt;select class="u-full-width" 
+        &lt;select class="u-full-width"
         id="exampleDisabledOption" disabled&gt;
             &lt;option value="Option 1"&gt;Disabled option&lt;/option&gt;
         &lt;/select&gt;
@@ -340,7 +386,7 @@ id="exampleMessage"&gt;&lt;/textarea&gt;
     &lt;div class="col-sm-6"&gt;
         &lt;label class="disabledSwitch"&gt;
             &lt;label class="switch"&gt;
-                &lt;input class="switch" type="checkbox" 
+                &lt;input class="switch" type="checkbox"
                 disabled checked&gt;
                 &lt;span class="slider round"&gt;&lt;/span&gt;
                 &nbsp;
@@ -348,7 +394,35 @@ id="exampleMessage"&gt;&lt;/textarea&gt;
             &lt;span class="label-body"&gt;Disabled checked&lt;/span&gt;
         &lt;/label&gt;
     &lt;/div&gt;
-&lt;/div&gt;                                                    
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-sm-6"&gt;
+        &lt;p&gt;
+        &lt;label class="label"&gt;Select an option:&lt;/label&gt;
+        &lt;select class="selectpicker" 
+            placeholder="Pease select an option:" 
+            disabled&gt;
+            &lt;option&gt;One&lt;/option&gt;
+            &lt;option&gt;Two&lt;/option&gt;
+            &lt;option&gt;Three&lt;/option&gt;
+            &lt;option&gt;Four&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-sm-6"&gt;
+        &lt;p&gt;
+        &lt;label class="label"&gt;Here you can search the option:&lt;/label&gt;
+        &lt;select class="selectpicker search" 
+            placeholder="Please select an option:" 
+            disabled&gt;
+            &lt;option&gt;Ketchup&lt;/option&gt;
+            &lt;option&gt;Mustard&lt;/option&gt;
+            &lt;option&gt;Barbecue&lt;/option&gt;
+            &lt;option&gt;Mayonnaise&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class="row"&gt;
     &lt;div class="col-sm-6"&gt;
         &lt;label&gt;Disabled Checkboxes&lt;/label&gt;
@@ -356,26 +430,26 @@ id="exampleMessage"&gt;&lt;/textarea&gt;
             &lt;input type="checkbox" checked="checked" disabled&gt;
             &lt;span class="check mark"&gt;&lt;/span&gt;
         &lt;/label&gt;
-        
+
         &lt;label class="checkcontainer"&gt;Two
             &lt;input type="checkbox" disabled&gt;
             &lt;span class="check mark"&gt;&lt;/span&gt;
         &lt;/label&gt;
-        
+
         &lt;label class="checkcontainer"&gt;Three
             &lt;input type="checkbox" disabled&gt;
             &lt;span class="check mark"&gt;&lt;/span&gt;
         &lt;/label&gt;
-        
+
         &lt;label class="checkcontainer"&gt;Four
             &lt;input type="checkbox" disabled&gt;
             &lt;span class="check mark"&gt;&lt;/span&gt;
-        &lt;/label&gt; 
+        &lt;/label&gt;
     &lt;/div&gt;
     &lt;div class="col-sm-6"&gt;
         &lt;label&gt;Disabled Radiobuttons&lt;/label&gt;
         &lt;label class="checkcontainer"&gt;One
-            &lt;input type="radio" checked="checked" name="radio" 
+            &lt;input type="radio" checked="checked" name="radio"
             disabled&gt;
             &lt;span class="radio mark"&gt;&lt;/span&gt;
         &lt;/label&gt;
@@ -393,13 +467,13 @@ id="exampleMessage"&gt;&lt;/textarea&gt;
         &lt;/label&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-&lt;input class="button-primary" value="Submit" type="submit" 
+&lt;input class="button-primary" value="Submit" type="submit"
 disabled&gt;
-&lt;/form&gt;                              
+&lt;/form&gt;
                         </code></pre>
                     </div>
             </div>
-        </div>    
+        </div>
     </div>
 <script src="../javascript/skeleton-styled.js"></script>
 <script type="text/javascript">
@@ -409,7 +483,7 @@ function toggle(elemName) {
             elem.style.maxHeight = null;
         } else {
             elem.style.maxHeight = elem.scrollHeight + "px";
-        }        
+        }
     }
 </script>
 </body>

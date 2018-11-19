@@ -39,6 +39,48 @@
     background-repeat: no-repeat;
 }
 
+.selectpicker-dropdown-trigger-off.disabled,
+.selectpicker-dropdown-trigger-off.disabled:hover{    
+	text-decoration: none;
+    border-bottom-style: solid; //For safari rendering 
+    border-radius: 0px; //For macos rendering.
+    caret-color: $clear-black;
+    width: 100%;
+    display: inline-block;
+    cursor: no-drop;
+    height: $form-element-height;
+    padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+    background-color: transparent;
+    border-color: $dark-white ;    
+    box-sizing: border-box; 
+    border-width: 0 0 $border-width;
+    color: $clear-grey;  
+	
+	-webkit-transition: border-color $transition-time;
+	-moz-transition: border-color $transition-time;
+	-o-transition: border-color $transition-time; 
+    transition: border-color $transition-time;
+    
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image:
+        linear-gradient(45deg, transparent 50%, $clear-grey 50%),
+        linear-gradient(135deg, $clear-grey 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        calc(100% - 2.5em) 0.5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+    background-repeat: no-repeat;
+}
+
 .selectpicker-dropdown-trigger-on {
     color: black;
 	text-decoration: none;
@@ -134,10 +176,6 @@
 	-moz-transition: all $transition-time; 
 	-o-transition: all $transition-time; 
 	transition: all $transition-time;
-}
-
-.dropcontainer ul li:first-child {
-	display: none;
 }
 
 .dropcontainer ul li:last-child {
