@@ -1,8 +1,13 @@
-var acc = document.getElementsByClassName("accordion");
-var i;
+function setupAccordions(accordions) {  
+  var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+  for (i = 0; i < accordions.length; i++) {
+    setupAccordion(accordions[i]);
+  }
+}
+
+function setupAccordion(accordion) {
+  accordion.addEventListener("click", function() {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
     var icon = this.firstElementChild;
@@ -71,27 +76,30 @@ window.onclick = function(event) {
         animationCloseModal(shownModal);
     }
 }
-var elms = document.querySelectorAll('input[type=range]');
+function setupMultiRanges(multiRanges) {    
+    multiRanges.forEach(setupMultiRange);
+}
 
-elms.forEach(function(elm) {
-    var container = elm.parentNode;
-    var dataValues = elm.getAttribute('data-values');
+function setupMultiRange(multiRange) {
+    var container = multiRange.parentNode;
+    var dataValues = multiRange.getAttribute('data-values');
     if (dataValues != null) {
-        var values = elm.getAttribute('data-values').split(' ');
+        var values = multiRange.getAttribute('data-values').split(' ');
 
-        values.forEach(function (value, i, values) {
-        var rangePart = elm.cloneNode();
-        rangePart.type = 'range';
-        rangePart.removeAttribute('data-values');
-        rangePart.value = value;
-        rangePart = container.insertBefore(rangePart, elm);
+        values.forEach(function (value) {
+            var rangePart = multiRange.cloneNode();
+            rangePart.type = 'range';
+            rangePart.removeAttribute('data-values');
+            rangePart.value = value;
+            rangePart = container.insertBefore(rangePart, multiRange);
         });
         
-        elm.remove();
+        multiRange.remove();
     }
-});
+}
 
-var  defaultSidebarWidth = document.getElementsByClassName("navbar side")[0].currentStyle || window.getComputedStyle(document.getElementsByClassName("navbar side")[0]);
+
+//var  defaultSidebarWidth = document.getElementsByClassName("navbar side")[0].currentStyle || window.getComputedStyle(document.getElementsByClassName("navbar side")[0]);
 
 
 function showTopNavBar(id) {
@@ -268,76 +276,47 @@ function addSearchableList(select, hiddenfield, trigger, replaceUL) {
 	}
 }
 
-function turnListToDropdown(ul) {
-	if(check(ul,listclass))
-	{
-		var newform=document.createElement('form');
-		var newselect=document.createElement('select');
-		for(i=0;ul.getElementsByTagName('a').length;i++)
-		{
-			var newopt=document.createElement('option');
-			newopt.value=ul.getElementsByTagName('a')[i].href;
-			newopt.appendChild(document.createTextNode(ul.getElementsByTagName('a')[i].innerHTML));
-			newselect.appendChild(newopt);
-		}
-		newselect.onchange=function()
-		{
-			window.location=this.options[this.selectedIndex].value;
-		}
-		newform.appendChild(newselect);
-		ul.parentNode.insertBefore(newform,ul);
-	}
-}
-
-function createSelectpickers() {
-	if(!document.getElementById && !document.createTextNode){return;}
-
-
+function createSelectpickers(sels) {
+	if(!document.getElementById && !document.createTextNode) {return;}
 /*
 	Turn all selects into DOM dropdowns
 */
 	var count=0;
 	var toreplace=new Array();
-	var sels=document.getElementsByTagName('select');
 	for(var i=0;i<sels.length;i++){ // for each select in the document
 		if (sels[i].classList.contains(selectclass)) {
-			var hiddenfield = addInput(sels[i]);
-			var trigger = addAnchor(sels[i]);
-
-            var replaceUL=document.createElement('ul');
-            var width = sels[i].parentElement.offsetWidth+"px";
-			replaceUL.setAttribute("style","width:"+width);
-			if (sels[i].classList.contains(searchSelectClass)) {
-				addSearchableList(sels[i],hiddenfield,trigger,replaceUL);
-			} else {
-				addList(sels[i],hiddenfield,trigger,replaceUL);
-			}
-
-			addclass(replaceUL,dropdownclosed);
-			var div=document.createElement('div');
-			div.appendChild(replaceUL);
-			addclass(div,boxclass);
-			sels[i].parentNode.insertBefore(div,sels[i])
+			createSelectpicker(sels[i]);
 			toreplace[count]=sels[i];
 			count++;
 		}
 	}
 
-/*
-	Turn all ULs with the class defined above into dropdown navigations
-*/
-
-	var uls=document.getElementsByTagName('ul');
-	for(var i=0;i<uls.length;i++){
-		turnListToDropdown(uls[i]);
-	}
+	//TODO: better way for remove elements instead other loop
+	//Remove all old select elements
 	for(i=0;i<count;i++){
 		toreplace[i].parentNode.removeChild(toreplace[i]);
 	}
-
 }
 
-createSelectpickers();
+function createSelectpicker(sel) {
+	var hiddenfield = addInput(sel);
+	var trigger = addAnchor(sel);
+
+	var replaceUL=document.createElement('ul');
+	var width = sel.parentElement.offsetWidth+"px";
+	replaceUL.setAttribute("style","width:"+width);
+	if (sel.classList.contains(searchSelectClass)) {
+		addSearchableList(sel,hiddenfield,trigger,replaceUL);
+	} else {
+		addList(sel,hiddenfield,trigger,replaceUL);
+	}
+
+	addclass(replaceUL,dropdownclosed);
+	var div=document.createElement('div');
+	div.appendChild(replaceUL);
+	addclass(div,boxclass);
+	sel.parentNode.insertBefore(div,sel)
+}
 function plusSlides(n, no) {
   showSlides(slideIndex[no] += n, no);
 }
