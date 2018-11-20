@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="../css/skeleton-styled.min.css">    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <script src="../javascript/skeleton-styled.js"></script>
 </head>
 <body>
     <div id="topnav" class= "navbar top">
@@ -129,6 +130,9 @@
         &lt;p&gt;Lorem ipsum...&lt;/p&gt;
     &lt;/div&gt; 
 &lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+setupAccordions(document.getElementsByClassName('accordion'));
+&lt;/script&gt;
                     </code></pre>
                 </div> 
             </div>
@@ -170,22 +174,27 @@
 &lt;input multiple type="range" min="1" max="100" data-values="50 90" class="warning"&gt;
 &lt;input multiple type="range" min="1" max="100" data-values="50 90" class="danger"&gt;
 &lt;input multiple type="range" min="1" max="100" data-values="50 90" class="dark"&gt;
+&lt;script type="text/javascript"&gt;
+setupMultiRanges(document.querySelectorAll('input[type=range]'));
+&lt;/script&gt;
                             </code></pre>
                         </div>
                     </div>
                 </div>
         </div>
     </div>
-<script src="../javascript/skeleton-styled.min.js"></script>
+
 <script type="text/javascript">
+setupAccordions(document.getElementsByClassName('accordion'));
+setupMultiRanges(document.querySelectorAll('input[type=range]'));
 function toggle(elemName) {
-        var elem = document.getElementById(elemName);
-        if (elem.style.maxHeight) {
-            elem.style.maxHeight = null;
-        } else {
-            elem.style.maxHeight = elem.scrollHeight + "px";
-        }        
-    }
+    var elem = document.getElementById(elemName);
+    if (elem.style.maxHeight) {
+        elem.style.maxHeight = null;
+    } else {
+        elem.style.maxHeight = elem.scrollHeight + "px";
+    }        
+}
 </script>
 </body>
 </html>

@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="../css/skeleton-styled.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <script src="../javascript/skeleton-styled.js"></script>
 </head>
 <body>
     <div id="topnav" class= "navbar top">
@@ -402,6 +403,9 @@ id="exampleMessage"&gt;&lt;/textarea&gt;
 &lt;/div&gt;
 &lt;input class="button-primary" value="Submit" type="submit"&gt;
 &lt;/form&gt;
+&lt;script type="text/javascript"&gt;
+createSelectpickers(document.getElementsByTagName('select'));
+&lt;/script&gt;
 
                     </code></pre>
                 </div>
@@ -522,13 +526,16 @@ id="exampleMessage"&gt;&lt;/textarea&gt;
 &lt;input class="button-primary" value="Submit" type="submit"
 disabled&gt;
 &lt;/form&gt;
+&lt;script type="text/javascript"&gt;
+createSelectpickers(document.getElementsByTagName('select'));
+&lt;/script&gt;
                         </code></pre>
                     </div>
             </div>
         </div>
     </div>
-<script src="../javascript/skeleton-styled.js"></script>
 <script type="text/javascript">
+createSelectpickers(document.getElementsByTagName('select'));
 function toggle(elemName) {
         var elem = document.getElementById(elemName);
         if (elem.style.maxHeight) {
