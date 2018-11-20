@@ -7,6 +7,7 @@ var triggeroff='selectpicker-dropdown-trigger-off';	// class for the inactive tr
 var dropdownclosed='dropdown-selectpicker'; 		// closed dropdown
 var dropdownopen='dropdown-selectpicker-visible';	// open dropdown
 var disabledClass = 'disabled'
+var opened;
 
 function check(element,className) {
     return className === element.className;
@@ -17,8 +18,10 @@ function addclass(element,newClass) {
 }
 
 function swapclass(element,oldClass,newClass) {
+	console.log(element);
 	var className=element.className;
 	element.className=!check(element,oldClass)?className.replace(newClass,oldClass):className.replace(oldClass,newClass);
+	console.log(element);
 }
 
 function addInput(select){
@@ -47,11 +50,13 @@ function addAnchor(select) {
 	anchor.text = select.getAttribute('placeholder') ? select.getAttribute('placeholder') : "";
 	anchor.onclick=function(){
 		if (this.classList.contains(disabledClass)) return false;
+		closeAllSelectPickers();
 		swapclass(this,triggeroff,triggeron);
 		swapclass(this.parentNode.getElementsByTagName('ul')[0],dropdownclosed,dropdownopen);
 		if(check(this,triggeron) && this.nextElementSibling.getElementsByTagName('input').length == 1) {
 			this.nextElementSibling.getElementsByTagName('input')[0].focus();
 		}
+		opened = true;
 		return false;
 	}
 	select.parentNode.insertBefore(anchor,select);
@@ -201,4 +206,42 @@ function createSelectpicker(sel) {
 	div.appendChild(replaceUL);
 	addclass(div,boxclass);
 	sel.parentNode.insertBefore(div,sel)
+}
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function showContent(element) {
+    document.getElementById(element).classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+document.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+  if(opened) {
+	  opened = false;
+	  return false;
+  }
+  if(!event.target.matches(triggeron)) {
+	closeAllSelectPickers();
+  }
+} 
+
+function closeAllSelectPickers() {
+	var selectpickers = document.getElementsByClassName(triggeron);
+	for(var i = 0; i < selectpickers.length; i++) {
+		swapclass(selectpickers[i].nextElementSibling.getElementsByTagName('ul')[0],dropdownopen,dropdownclosed);
+		swapclass(selectpickers[i],triggeron,triggeroff);
+		
+		
+	}
 }
