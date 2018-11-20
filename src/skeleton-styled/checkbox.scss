@@ -26,9 +26,11 @@
     border-radius: 50%;
     transition: background-color $transition-time $transition-type;
 }
+
 /* Clearer color when the mark is disabled */
 .checkcontainer input:disabled ~ .mark {
-    background-color: $dark-white;    
+    background-color: $dark-white;  
+    cursor: no-drop;  
 }
 /* On mouse-over, add a grey background color */
 .checkcontainer:hover input ~ .check {
@@ -37,6 +39,7 @@
 /* No change when the mark is disabled */
 .checkcontainer:hover input:disabled ~ .check {
     background-color: $dark-white;
+    cursor: no-drop;
 } 
 /* When the checkbox is checked, add a blue background */
 .checkcontainer input:checked ~ .check {
@@ -45,6 +48,7 @@
 /* When the checkbos is checked and disabled */
 .checkcontainer input:checked:disabled ~ .check {
     background-color: $mid-blue;
+    cursor: no-drop;
 }
   
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -79,7 +83,8 @@
 
 /* On mouse-over disabled, no change*/
 .checkcontainer:hover input:disabled ~ .radio {
-    background-color: $dark-white;    
+    background-color: $dark-white;   
+    cursor: no-drop; 
 }
   
 /* When the radio button is checked, add a blue background */
@@ -90,6 +95,7 @@
 /* When the radio button is checked and disabled */
 .checkcontainer input:checked:disabled ~ .radio {
     background-color: $mid-blue;
+    cursor: no-drop;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */

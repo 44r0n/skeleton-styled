@@ -23,7 +23,7 @@
 
 input:disabled + .slider {
     background-color: $mid-red;
-    cursor: default;
+    cursor: no-drop;
 }
   
 .slider:before {
@@ -43,6 +43,7 @@ input:checked + .slider {
 }
 input:checked:disabled + .slider {
     background-color: $mid-blue;
+    cursor: no-drop; 
 }
   
 input:focus + .slider {
