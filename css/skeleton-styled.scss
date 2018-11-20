@@ -1716,8 +1716,8 @@ input[type="reset"].button:disabled,
 input[type="button"].button:disabled {
 color: $dark-white;
 border-color: $dark-white;
-cursor: default;
- }
+cursor: no-drop;
+}
 
 
 .button.button-primary,
@@ -1771,7 +1771,7 @@ input[type="reset"].button-primary:disabled,
 input[type="button"].button-primary:disabled {
 background-color: $mid-blue;
 border-color: $mid-blue;
-cursor: default;
+cursor: no-drop;
  }
 /* primary outline disabled */
 .button.button-primary.outline:disabled,
@@ -1835,7 +1835,7 @@ input[type="reset"].button-danger:disabled,
 input[type="button"].button-danger:disabled {
 background-color: $mid-red;
 border-color: $mid-red;
-cursor: default;
+cursor: no-drop;
  }
 /* Danger outline disabled */
 .button.button-danger.outline:disabled,
@@ -1900,7 +1900,7 @@ input[type="reset"].button-success:disabled,
 input[type="button"].button-success:disabled {
 background-color: $mid-green;
 border-color: $mid-green;
-cursor: default;
+cursor: no-drop;
  }
 /* Success outline disabled */
 .button.button-success.outline:disabled,
@@ -1964,7 +1964,7 @@ input[type="reset"].button-warning:disabled,
 input[type="button"].button-warning:disabled {
 background-color: $mid-yellow;
 border-color: $mid-yellow;
-cursor: default;
+cursor: no-drop;
  }
 /* warning outline disabled */
 .button.button-warning.outline:disabled,
@@ -2027,7 +2027,7 @@ input[type="reset"].button-dark:disabled,
 input[type="button"].button-dark:disabled {
 background-color: $mid-grey;
 border-color: $mid-grey;
-cursor: default;
+cursor: no-drop;
  }
 /* dark outline disabled */
 .button.button-dark.outline:disabled,
@@ -2111,9 +2111,11 @@ input[type="button"].button-dark.outline:disabled {
     border-radius: 50%;
     transition: background-color $transition-time $transition-type;
 }
+
 /* Clearer color when the mark is disabled */
 .checkcontainer input:disabled ~ .mark {
-    background-color: $dark-white;    
+    background-color: $dark-white;  
+    cursor: no-drop;  
 }
 /* On mouse-over, add a grey background color */
 .checkcontainer:hover input ~ .check {
@@ -2122,6 +2124,7 @@ input[type="button"].button-dark.outline:disabled {
 /* No change when the mark is disabled */
 .checkcontainer:hover input:disabled ~ .check {
     background-color: $dark-white;
+    cursor: no-drop;
 } 
 /* When the checkbox is checked, add a blue background */
 .checkcontainer input:checked ~ .check {
@@ -2130,6 +2133,7 @@ input[type="button"].button-dark.outline:disabled {
 /* When the checkbos is checked and disabled */
 .checkcontainer input:checked:disabled ~ .check {
     background-color: $mid-blue;
+    cursor: no-drop;
 }
   
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -2164,7 +2168,8 @@ input[type="button"].button-dark.outline:disabled {
 
 /* On mouse-over disabled, no change*/
 .checkcontainer:hover input:disabled ~ .radio {
-    background-color: $dark-white;    
+    background-color: $dark-white;   
+    cursor: no-drop; 
 }
   
 /* When the radio button is checked, add a blue background */
@@ -2175,6 +2180,7 @@ input[type="button"].button-dark.outline:disabled {
 /* When the radio button is checked and disabled */
 .checkcontainer input:checked:disabled ~ .radio {
     background-color: $mid-blue;
+    cursor: no-drop;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -2360,7 +2366,8 @@ select:disabled {
     box-sizing: border-box; 
     border-width: 0 0 $border-width;
     transition: border-color $transition-time;  
-    color: $clear-grey;  
+    color: $clear-grey; 
+    cursor: no-drop; 
 }   
 /* Removes awkward default styles on some inputs for iOS */
 input[type="email"],
@@ -3518,7 +3525,7 @@ hr {
 
 input:disabled + .slider {
     background-color: $mid-red;
-    cursor: default;
+    cursor: no-drop;
 }
   
 .slider:before {
@@ -3538,6 +3545,7 @@ input:checked + .slider {
 }
 input:checked:disabled + .slider {
     background-color: $mid-blue;
+    cursor: no-drop; 
 }
   
 input:focus + .slider {
