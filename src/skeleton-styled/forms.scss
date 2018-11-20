@@ -115,7 +115,8 @@ select:disabled {
     box-sizing: border-box; 
     border-width: 0 0 $border-width;
     transition: border-color $transition-time;  
-    color: $clear-grey;  
+    color: $clear-grey; 
+    cursor: no-drop; 
 }   
 /* Removes awkward default styles on some inputs for iOS */
 input[type="email"],

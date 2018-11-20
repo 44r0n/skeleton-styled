@@ -86,8 +86,8 @@ input[type="reset"].button:disabled,
 input[type="button"].button:disabled {
 color: $dark-white;
 border-color: $dark-white;
-cursor: default;
- }
+cursor: no-drop;
+}
 
 
 .button.button-primary,
@@ -141,7 +141,7 @@ input[type="reset"].button-primary:disabled,
 input[type="button"].button-primary:disabled {
 background-color: $mid-blue;
 border-color: $mid-blue;
-cursor: default;
+cursor: no-drop;
  }
 /* primary outline disabled */
 .button.button-primary.outline:disabled,
@@ -205,7 +205,7 @@ input[type="reset"].button-danger:disabled,
 input[type="button"].button-danger:disabled {
 background-color: $mid-red;
 border-color: $mid-red;
-cursor: default;
+cursor: no-drop;
  }
 /* Danger outline disabled */
 .button.button-danger.outline:disabled,
@@ -270,7 +270,7 @@ input[type="reset"].button-success:disabled,
 input[type="button"].button-success:disabled {
 background-color: $mid-green;
 border-color: $mid-green;
-cursor: default;
+cursor: no-drop;
  }
 /* Success outline disabled */
 .button.button-success.outline:disabled,
@@ -334,7 +334,7 @@ input[type="reset"].button-warning:disabled,
 input[type="button"].button-warning:disabled {
 background-color: $mid-yellow;
 border-color: $mid-yellow;
-cursor: default;
+cursor: no-drop;
  }
 /* warning outline disabled */
 .button.button-warning.outline:disabled,
@@ -397,7 +397,7 @@ input[type="reset"].button-dark:disabled,
 input[type="button"].button-dark:disabled {
 background-color: $mid-grey;
 border-color: $mid-grey;
-cursor: default;
+cursor: no-drop;
  }
 /* dark outline disabled */
 .button.button-dark.outline:disabled,
