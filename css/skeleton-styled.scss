@@ -2224,6 +2224,8 @@ clear: both; }
     z-index: 1;
     right: 0;
     margin-top: 67px;    
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
 }
 
 /* Links inside the dropdown */
