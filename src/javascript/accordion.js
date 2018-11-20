@@ -1,8 +1,13 @@
-var acc = document.getElementsByClassName("accordion");
-var i;
+function setupAccordions(accordions) {  
+  var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+  for (i = 0; i < accordions.length; i++) {
+    setupAccordion(accordions[i]);
+  }
+}
+
+function setupAccordion(accordion) {
+  accordion.addEventListener("click", function() {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
     var icon = this.firstElementChild;

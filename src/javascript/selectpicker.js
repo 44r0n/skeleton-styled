@@ -161,73 +161,44 @@ function addSearchableList(select, hiddenfield, trigger, replaceUL) {
 	}
 }
 
-function turnListToDropdown(ul) {
-	if(check(ul,listclass))
-	{
-		var newform=document.createElement('form');
-		var newselect=document.createElement('select');
-		for(i=0;ul.getElementsByTagName('a').length;i++)
-		{
-			var newopt=document.createElement('option');
-			newopt.value=ul.getElementsByTagName('a')[i].href;
-			newopt.appendChild(document.createTextNode(ul.getElementsByTagName('a')[i].innerHTML));
-			newselect.appendChild(newopt);
-		}
-		newselect.onchange=function()
-		{
-			window.location=this.options[this.selectedIndex].value;
-		}
-		newform.appendChild(newselect);
-		ul.parentNode.insertBefore(newform,ul);
-	}
-}
-
-function createSelectpickers() {
-	if(!document.getElementById && !document.createTextNode){return;}
-
-
+function createSelectpickers(sels) {
+	if(!document.getElementById && !document.createTextNode) {return;}
 /*
 	Turn all selects into DOM dropdowns
 */
 	var count=0;
 	var toreplace=new Array();
-	var sels=document.getElementsByTagName('select');
 	for(var i=0;i<sels.length;i++){ // for each select in the document
 		if (sels[i].classList.contains(selectclass)) {
-			var hiddenfield = addInput(sels[i]);
-			var trigger = addAnchor(sels[i]);
-
-            var replaceUL=document.createElement('ul');
-            var width = sels[i].parentElement.offsetWidth+"px";
-			replaceUL.setAttribute("style","width:"+width);
-			if (sels[i].classList.contains(searchSelectClass)) {
-				addSearchableList(sels[i],hiddenfield,trigger,replaceUL);
-			} else {
-				addList(sels[i],hiddenfield,trigger,replaceUL);
-			}
-
-			addclass(replaceUL,dropdownclosed);
-			var div=document.createElement('div');
-			div.appendChild(replaceUL);
-			addclass(div,boxclass);
-			sels[i].parentNode.insertBefore(div,sels[i])
+			createSelectpicker(sels[i]);
 			toreplace[count]=sels[i];
 			count++;
 		}
 	}
 
-/*
-	Turn all ULs with the class defined above into dropdown navigations
-*/
-
-	var uls=document.getElementsByTagName('ul');
-	for(var i=0;i<uls.length;i++){
-		turnListToDropdown(uls[i]);
-	}
+	//TODO: better way for remove elements instead other loop
+	//Remove all old select elements
 	for(i=0;i<count;i++){
 		toreplace[i].parentNode.removeChild(toreplace[i]);
 	}
-
 }
 
-createSelectpickers();
+function createSelectpicker(sel) {
+	var hiddenfield = addInput(sel);
+	var trigger = addAnchor(sel);
+
+	var replaceUL=document.createElement('ul');
+	var width = sel.parentElement.offsetWidth+"px";
+	replaceUL.setAttribute("style","width:"+width);
+	if (sel.classList.contains(searchSelectClass)) {
+		addSearchableList(sel,hiddenfield,trigger,replaceUL);
+	} else {
+		addList(sel,hiddenfield,trigger,replaceUL);
+	}
+
+	addclass(replaceUL,dropdownclosed);
+	var div=document.createElement('div');
+	div.appendChild(replaceUL);
+	addclass(div,boxclass);
+	sel.parentNode.insertBefore(div,sel)
+}
