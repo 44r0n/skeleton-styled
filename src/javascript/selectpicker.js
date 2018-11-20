@@ -18,10 +18,8 @@ function addclass(element,newClass) {
 }
 
 function swapclass(element,oldClass,newClass) {
-	console.log(element);
 	var className=element.className;
 	element.className=!check(element,oldClass)?className.replace(newClass,oldClass):className.replace(oldClass,newClass);
-	console.log(element);
 }
 
 function addInput(select){
@@ -231,7 +229,8 @@ document.onclick = function(event) {
 	  opened = false;
 	  return false;
   }
-  if(!event.target.matches(triggeron)) {
+  
+  if(!event.target.matches('.'+triggeron) && !event.target.parentElement.matches('.'+dropdownopen) && !event.target.parentElement.parentElement.matches('.'+dropdownopen)) {
 	closeAllSelectPickers();
   }
 } 
