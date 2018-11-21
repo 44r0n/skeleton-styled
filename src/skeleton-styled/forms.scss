@@ -143,7 +143,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-    border-color: $blue;
+    border-color: $primary;
     outline: 0;
     outline-width: 0px; // safari
 }
@@ -186,10 +186,10 @@ select {
 select:focus {
     transition: border-color $transition-time;
     transition: background-image $transition-time;
-    border-color: $blue;
+    border-color: $primary;
     background-image:
-        linear-gradient(45deg, $blue 50%, transparent 50%),
-        linear-gradient(135deg, transparent 50%, $blue 50%);
+        linear-gradient(45deg, $primary 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, $primary 50%);
     background-position:
         calc(100% - 15px) 1em,
         calc(100% - 20px) 1em,
@@ -238,12 +238,12 @@ input[type=range]::-moz-range-thumb {
 }
 
 input[type=range].primary::-webkit-range-thumb {
-    background: $blue;
+    background: $primary;
     border: 0;
 }
 
 input[type=range].primary::-moz-range-thumb {
-    background: $blue;
+    background: $primary;
     border: 0;
 }
 

@@ -37,8 +37,21 @@
         </form>        
     </div>
 <script type="text/javascript">
+function getStyleSheetPropertyValue(selectorText, propertyName) {
+        // search backwards because the last match is more likely the right one
+        for (var s= document.styleSheets.length - 1; s >= 0; s--) {
+            var cssRules = document.styleSheets[s].cssRules ||
+                    document.styleSheets[s].rules || []; // IE support
+            for (var c=0; c < cssRules.length; c++) {
+                if (cssRules[c].selectorText === selectorText) 
+                    return cssRules[c].style[propertyName];
+            }
+        }
+        return null;
+    }
+
     function changeSelectColor(id) {
-        document.getElementById(id).style.color = '#33C3F0';
+        document.getElementById(id).style.color = getStyleSheetPropertyValue('.primary','color');
     }
 
     function changeOutColor(id) {
@@ -51,7 +64,7 @@
     }
 
     function changeErrorColor(id) {
-        document.getElementById(id).style.color = '#c94c4c';
+        document.getElementById(id).style.color = getStyleSheetPropertyValue('.danger','color');
     }
 
     function checkStatus(element,id) {

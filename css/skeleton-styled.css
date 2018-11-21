@@ -1803,7 +1803,7 @@ input[type="button"].button-dark.outline:disabled {
   background-color: #D1D1D1;
   cursor: no-drop; }
 
-/* When the checkbox is checked, add a blue background */
+/* When the checkbox is checked, add a primary background */
 .checkcontainer input:checked ~ .check {
   background-color: #33C3F0; }
 
@@ -1842,7 +1842,7 @@ input[type="button"].button-dark.outline:disabled {
   background-color: #D1D1D1;
   cursor: no-drop; }
 
-/* When the radio button is checked, add a blue background */
+/* When the radio button is checked, add a primary background */
 .checkcontainer input:checked ~ .radio {
   background-color: #33C3F0; }
 
@@ -3315,7 +3315,7 @@ a {
   color: #1EAEDB; }
 
 a:hover {
-  color: #0FA0CE; }
+  color: #1EAEDB; }
 
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

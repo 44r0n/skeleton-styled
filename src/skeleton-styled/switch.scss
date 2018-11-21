@@ -39,15 +39,15 @@ input:disabled + .slider {
 }
   
 input:checked + .slider {
-    background-color: $blue;
+    background-color: $primary;
 }
 input:checked:disabled + .slider {
-    background-color: $mid-blue;
+    background-color: $mid-primary;
     cursor: no-drop; 
 }
   
 input:focus + .slider {
-    box-shadow: 0 0 1px $blue;
+    box-shadow: 0 0 1px $primary;
 }
   
 input:checked + .slider:before {

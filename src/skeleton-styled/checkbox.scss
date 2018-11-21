@@ -41,13 +41,13 @@
     background-color: $dark-white;
     cursor: no-drop;
 } 
-/* When the checkbox is checked, add a blue background */
+/* When the checkbox is checked, add a primary background */
 .checkcontainer input:checked ~ .check {
-    background-color: $blue;
+    background-color: $primary;
 }
 /* When the checkbos is checked and disabled */
 .checkcontainer input:checked:disabled ~ .check {
-    background-color: $mid-blue;
+    background-color: $mid-primary;
     cursor: no-drop;
 }
   
@@ -87,14 +87,14 @@
     cursor: no-drop; 
 }
   
-/* When the radio button is checked, add a blue background */
+/* When the radio button is checked, add a primary background */
 .checkcontainer input:checked ~ .radio {
-    background-color: $blue;
+    background-color: $primary;
 }
 
 /* When the radio button is checked and disabled */
 .checkcontainer input:checked:disabled ~ .radio {
-    background-color: $mid-blue;
+    background-color: $mid-primary;
     cursor: no-drop;
 }
 

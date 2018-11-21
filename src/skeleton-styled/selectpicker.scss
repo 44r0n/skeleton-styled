@@ -93,7 +93,7 @@
     border-width: 0 0 $border-width;
     transition: border-color $transition-time;
     border-radius: 0px; 
-    border-color: $blue;
+    border-color: $primary;
     caret-color: $clear-black;
     width: 100%;
     display: inline-block;
@@ -105,10 +105,10 @@
     
     transition: border-color $transition-time;
     transition: background-image $transition-time;
-    border-color: $blue;
+    border-color: $primary;
     background-image:
-        linear-gradient(45deg, $blue 50%, transparent 50%),
-        linear-gradient(135deg, transparent 50%, $blue 50%);
+        linear-gradient(45deg, $primary 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, $primary 50%);
     background-position:
         calc(100% - 15px) 1em,
         calc(100% - 20px) 1em,
@@ -166,7 +166,7 @@
 }
 
 .dropcontainer ul li:hover {
-	background: $dark-blue;
+	background: $dark-primary;
     outline: none;
 }
 
@@ -195,6 +195,6 @@
 }
 
 .dropcontainer .fas {
-    color: $blue;
+    color: $primary;
     float: right;
 }
