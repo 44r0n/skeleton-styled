@@ -37,7 +37,7 @@ body.dark input[type="url"]:focus,
 body.dark input[type="password"]:focus,
 body.dark textarea:focus,
 body.dark select:focus {
-    border-color: $blue;
+    border-color: $primary;
     outline: 0;
     outline-width: 0px; // safari
 }
