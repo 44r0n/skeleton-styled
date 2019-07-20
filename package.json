@@ -31,7 +31,7 @@
   "dependencies": {},
   "devDependencies": {
     "snyk": "^1.94.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.0.0",
